@@ -1,10 +1,10 @@
 {
-  "name": "@acme/api",
+  "name": "@my/api",
   "packageManager": "yarn@3.2.3",
   "types": "./index.ts",
   "license": "MIT",
   "dependencies": {
-    "@acme/db": "*",
+    "@my/db": "*",
     "@clerk/nextjs": "^4.6.15",
     "@trpc/client": "^10.1.0",
     "@trpc/server": "^10.1.0",

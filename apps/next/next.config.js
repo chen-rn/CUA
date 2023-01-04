@@ -15,7 +15,7 @@ const boolVals = {
 const disableExtraction =
   boolVals[process.env.DISABLE_EXTRACTION] ?? process.env.NODE_ENV === 'development'
 
-console.log(`
+/* console.log(`
 
 Welcome to Tamagui!
 
@@ -38,7 +38,7 @@ concurrent mode support as well.
 
 Remove this log in next.config.js.
 
-`)
+`) */
 
 const plugins = [
   withImages,
@@ -79,6 +79,19 @@ module.exports = function () {
       // optimizeCss: true,
       scrollRestoration: true,
       legacyBrowsers: false,
+    },
+    future: {
+      webpack5: true, // by default, if you customize webpack config, they switch back to version 4.
+      // Looks like backward compatibility approach.
+    },
+    webpack(config) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback, // if you miss it, all the other options in fallback, specified
+        // by next.js will be dropped. Doesn't make much sense, but how it is
+        fs: false, // the solution
+      }
+
+      return config
     },
   }
 

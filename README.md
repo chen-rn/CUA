@@ -1,15 +1,17 @@
 # 🌌 create-universal-app(🏗️ WIP)
 
 ## 🤨 What is this?
+
 This is an opinionated template for creating universal(mobile + web codeshare) apps with built in auth for both mobile and web using Expo(mobile), Next(web), tRPC, Prisma, Tamagui(ui/styling), and Clerk(mobile + web auth).
 
-
 **Giants whom we are standing on the shoulders of**
+
 - [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo)(expo, next, trpc, prisma, nextauth - all in one, but no UI code share, no mobile auth)
 - [t3-turbo-and-clerk](https://github.com/clerkinc/t3-turbo-and-clerk)(t3 turbo, but with auth for mobile + web, still no code share for UI)
 - [tamagui + solito starter](https://github.com/tamagui/tamagui/tree/master/starters/next-expo-solito)(expo + next code share, but no tRPC, no built in auth)
 
 ## 🌟 How it works
+
 - Your **frontend** code will be coded in React Native Web inside of /packages/UI, meaning that you're going to write Views instead of divs.(Note: since we are using Tamagui, we're gonna write XStacks instead Views)
   - If you're familiar with React Native, it's going to feel as if you're writing a React Native app, that just happens to also run really well on the web(with SSR and all of those goodies).
   - This code will get rendered to HTML/CSS on the NextJS side and normal RN code on the Expo side.(with the help of Solito)
@@ -20,11 +22,13 @@ This is an opinionated template for creating universal(mobile + web codeshare) a
 - Mobile auth is done with Clerk Expo, and web auth is done with Clerk React and Clerk Next.
 
 ## 💭 Behind the decisions
+
 **Why Tamagui for style/ui?**
+
 - what is Tamagui? -> TLDR: it's for making things look pretty on both web and mobile while being really really fast and easy to work with.
 - In a bit more detail, Tamagui has 3 things. 1. Compiler 2. Core 3. UI
   - 1 is their unique way of turning your "style related code" into pure CSS faster. Most important thing here is probably this tree flattening thing they do.
-  - 2 is a small set of components they built aimed to replace <View> and <Text> that you one uses in RN, with some advantages.
+  - 2 is a small set of components they built aimed to replace View and Text that you one uses in RN, with some advantages.
   - 3 is a set of UI components that the tama team built using #2.
   - if you want a bit more detail, either visit their website or join discord channel or ask ChatGPT(I admit it's not the simplest thing out there)
 - why not Nativewind/Tailwind?
@@ -33,8 +37,8 @@ This is an opinionated template for creating universal(mobile + web codeshare) a
     - (TBH, copilot + autocomplete makes old fasion style = {{}} inline stles not that bad either)
   - So, this one is kinda 60/40 for me. Feel free to use Nativewind/Tailwind instead of Tama.
 
-
 **Why Clerk for auth?**
+
 - practical things I like about Clerk:
   - Really nice hooks/components(SignedIn/SignedOut) that work for both Expo and NextJs
   - SDKs for all 3 sides: Expo frontend, NextJs frontend, NextJs serverside
@@ -45,6 +49,6 @@ This is an opinionated template for creating universal(mobile + web codeshare) a
   - double edged sword of being a start up
 - On a high level, clerk promises an overall user management solution instead of just authentication with things like User Profile, Banning, Device management and stuff all built in. But in practice, I've just personally had an great time using Clerk for Expo compared to Firebase/Supabase auth for my projects.
 
-
 **Which DB?**
+
 - I recommend either spin up a postgres instance on Railway or use Supabase, doesn't matter too much IMO.

@@ -1,16 +1,13 @@
-# 🏗️ this is currently a work in progress
+# 🌌 create-universal-app(🏗️ WIP)
 
-## 🌌 create-universal-app
-An opinionated template for creating universal apps with built in Auth for both mobile and web.
+## 🤨 What is this?
+This is an opinionated template for creating universal(mobile + web codeshare) apps with built in auth for both mobile and web using Expo(mobile), Next(web), tRPC, Prisma, Tamagui(ui/styling), and Clerk(mobile + web auth).
 
-Universal: mobile/web codeshare, frontend and backend in one codebase
-Stack: Expo, Next, tRPC, Prisma, Tamagui, Clerk Auth
 
-**Giants that we are standing on the shoulders of:**
+**Giants whom we are standing on the shoulders of**
 - [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo)(expo, next, trpc, prisma, nextauth - all in one, but no UI code share, no mobile auth)
 - [t3-turbo-and-clerk](https://github.com/clerkinc/t3-turbo-and-clerk)(t3 turbo, but with auth for mobile + web, still no code share for UI)
 - [tamagui + solito starter](https://github.com/tamagui/tamagui/tree/master/starters/next-expo-solito)(expo + next code share, but no tRPC, no built in auth)
-- note: t3-turbo templates also have a critical issue at the moment preventing build on Expo.
 
 ## 🌟 How it works
 - Your **frontend** code will be coded in React Native Web inside of /packages/UI, meaning that you're going to write Views instead of divs.(Note: since we are using Tamagui, we're gonna write XStacks instead Views)
@@ -51,5 +48,3 @@ Stack: Expo, Next, tRPC, Prisma, Tamagui, Clerk Auth
 
 **Which DB?**
 - I recommend either spin up a postgres instance on Railway or use Supabase, doesn't matter too much IMO.
-  
-

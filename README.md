@@ -43,7 +43,7 @@ This is an opinionated template for creating universal(mobile + web codeshare) a
   - doesn't do SMS unless you pay: big negative for mobile, but imo makes up for it with easy oauth.
   - premium plan is also expensive compared to the alternatives
   - double edged sword of being a start up
-- On a high level, clerk promises an overall user management solution instead of just authentication with things like User Profile, Banning, Device management and stuff all built in. But in practice, I've just personally had an great time using Clerk for Expo compared to Firebase/Supabase auth.
+- On a high level, clerk promises an overall user management solution instead of just authentication with things like User Profile, Banning, Device management and stuff all built in. But in practice, I've just personally had an great time using Clerk for Expo compared to Firebase/Supabase auth for my projects.
 
 
 **Which DB?**

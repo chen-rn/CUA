@@ -1,11 +1,19 @@
 import React from 'react'
-import { Paragraph, YStack } from '@my/ui'
-import { SignIn } from '@clerk/nextjs'
+import { View } from 'react-native'
+import { Paragraph, Stack, Text, YStack } from '@my/ui'
+import { SignIn } from '@clerk/clerk-react'
+import { Platform } from 'react-native'
 
 export function SignInScreen() {
   return (
-    <YStack f={1} jc="center" ai="center" space>
-      <SignIn path="/sign-in" routing="path" signUpUrl="/sign-up" />
+    <YStack f={1} jc="center" ai="center" p="$4" space>
+      {Platform.OS === 'web' ? (
+        <SignIn />
+      ) : (
+        <View>
+          <Text>Sign in</Text>
+        </View>
+      )}
     </YStack>
   )
 }

@@ -13,6 +13,8 @@ export function NavigationProvider({ children }: { children: React.ReactNode }) 
             screens: {
               home: '',
               'user-detail': 'user/:id',
+              signin: 'signin',
+              signup: 'signup',
             },
           },
         }),

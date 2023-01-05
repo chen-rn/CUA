@@ -1,15 +1,21 @@
 import { Anchor, Button, H1, Input, Paragraph, Separator, Sheet, XStack, YStack } from '@my/ui'
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
+import { Stack } from '@my/ui'
 import React, { useState, useEffect } from 'react'
 import { useLink } from 'solito/link'
-/* import { SignedIn, SignedOut } from '@clerk/clerk-expo'
-import { useAuth } from '@clerk/clerk-expo' */
 import { trpc } from '../../utils/trpc'
+import { SignedIn, SignedOut, useAuth, useSignIn, useSignUp } from '../../utils/clerk'
 
 export function HomeScreen() {
-  /* const { signOut } = useAuth() */
-  const linkProps = useLink({
+  const { signOut, userId } = useAuth()
+  const userLinkProps = useLink({
     href: '/user/nate',
+  })
+  const signInLinkProps = useLink({
+    href: '/signin',
+  })
+  const signUpLinkProps = useLink({
+    href: '/signup',
   })
 
   const { data, isLoading, error } = trpc.entry.all.useQuery()
@@ -20,6 +26,10 @@ export function HomeScreen() {
 
   if (isLoading) {
     return <Paragraph>Loading...</Paragraph>
+  }
+
+  if (error) {
+    return <Paragraph>{error.message}</Paragraph>
   }
 
   return (
@@ -52,19 +62,27 @@ export function HomeScreen() {
         <Paragraph key={entry.id}>{entry.id}</Paragraph>
       ))}
 
-      <Paragraph>hihi how r u</Paragraph>
+      <Paragraph>{userId}</Paragraph>
+      <SignedIn>
+        {/* sign out button */}
+        <Button
+          onPress={() => {
+            signOut()
+          }}
+        >
+          Sign Out
+        </Button>
+      </SignedIn>
       <XStack>
-        <Button {...linkProps}>Link to user</Button>
+        <Button {...userLinkProps} mr="$4">
+          Link to User
+        </Button>
+        <Stack>
+          <Button {...signInLinkProps}>Link to Sign In</Button>
+          <Button {...signUpLinkProps}>Link to Sign Up</Button>
+        </Stack>
       </XStack>
       <SheetDemo />
-      {/* sign out button */}
-      <Button
-        onPress={() => {
-          signOut()
-        }}
-      >
-        Sign Out
-      </Button>
     </YStack>
   )
 }

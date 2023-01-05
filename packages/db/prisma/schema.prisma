@@ -6,23 +6,23 @@ generator client {
 
 datasource db {
     provider = "postgresql"
-    url      = env("DATABASE_URL")
+    //url      = env("DATABASE_URL")
+    url      = "postgresql://postgres:oIV7UGPl97FiVYaq@db.qwvsfvhphdefqfyuuhlb.supabase.co:5432/postgres"
 }
-
 
 //photo model
 model Entry {
     id       String   @id @default(cuid())
-    entryDay  DateTime //the day that the entry is assigned to
+    entryDay DateTime //the day that the entry is assigned to
 
     urlFrontPhotoThumbnail String
-    urlFrontPhotoHD      String
+    urlFrontPhotoHD        String
 
     urlBackPhotoThumbnail String
-    urlBackPhotoHD      String
+    urlBackPhotoHD        String
 
-    user      User     @relation(fields: [userId], references: [id])
-    userId    String
+    user   User   @relation(fields: [userId], references: [id])
+    userId String
 
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt

@@ -1,10 +1,10 @@
 //grab the images for the corresponding user
-import { router, publicProcedure, protectedProcedure } from "../trpc";
-import { z } from "zod";
+import { router, publicProcedure, protectedProcedure } from '../trpc'
+import { z } from 'zod'
 
 export const entryRouter = router({
-  all: protectedProcedure.query(({ ctx }) => {
-    return ctx.prisma.entry.findMany({ where: { userId: ctx.user.id } });
+  all: publicProcedure.query(({ ctx }) => {
+    return ctx.prisma.entry.findMany()
   }),
   create: protectedProcedure
     .input(
@@ -14,7 +14,7 @@ export const entryRouter = router({
         urlFrontPhotoHD: z.string(),
         urlBackPhotoThumbnail: z.string(),
         urlBackPhotoHD: z.string(),
-      }),
+      })
     )
     .mutation(({ ctx, input }) => {
       //create entry and link it to the user
@@ -31,6 +31,6 @@ export const entryRouter = router({
             },
           },
         },
-      });
+      })
     }),
-});
+})

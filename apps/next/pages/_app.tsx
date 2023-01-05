@@ -8,6 +8,7 @@ import Head from 'next/head'
 import React, { useMemo } from 'react'
 import type { SolitoAppProps } from 'solito'
 import 'raf/polyfill'
+import { trpc } from 'app/utils/trpc.web'
 
 function MyApp({ Component, pageProps }: SolitoAppProps) {
   return (
@@ -36,4 +37,4 @@ function ThemeProvider({ children }: { children: React.ReactNode }) {
   )
 }
 
-export default MyApp
+export default trpc.withTRPC(MyApp)

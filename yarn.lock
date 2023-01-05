@@ -5,32 +5,6 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@acme/api@workspace:packages/api":
-  version: 0.0.0-use.local
-  resolution: "@acme/api@workspace:packages/api"
-  dependencies:
-    "@acme/db": "*"
-    "@clerk/nextjs": ^4.6.15
-    "@trpc/client": ^10.1.0
-    "@trpc/server": ^10.1.0
-    eslint: ^8.28.0
-    superjson: ^1.9.1
-    typescript: ^4.9.3
-    zod: ^3.18.0
-  languageName: unknown
-  linkType: soft
-
-"@acme/db@*, @acme/db@workspace:packages/db":
-  version: 0.0.0-use.local
-  resolution: "@acme/db@workspace:packages/db"
-  dependencies:
-    "@prisma/client": ^4.6.1
-    dotenv-cli: ^6.0.0
-    prisma: ^4.6.1
-    typescript: ^4.9.3
-  languageName: unknown
-  linkType: soft
-
 "@ampproject/remapping@npm:^2.1.0":
   version: 2.2.0
   resolution: "@ampproject/remapping@npm:2.2.0"
@@ -2663,6 +2637,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@my/api@workspace:packages/api":
+  version: 0.0.0-use.local
+  resolution: "@my/api@workspace:packages/api"
+  dependencies:
+    "@clerk/nextjs": ^4.6.15
+    "@my/db": "*"
+    "@trpc/client": ^10.1.0
+    "@trpc/server": ^10.1.0
+    eslint: ^8.28.0
+    superjson: ^1.9.1
+    typescript: ^4.9.3
+    zod: ^3.18.0
+  languageName: unknown
+  linkType: soft
+
+"@my/db@*, @my/db@workspace:packages/db":
+  version: 0.0.0-use.local
+  resolution: "@my/db@workspace:packages/db"
+  dependencies:
+    "@prisma/client": ^4.6.1
+    dotenv-cli: ^6.0.0
+    prisma: ^4.6.1
+    typescript: ^4.9.3
+  languageName: unknown
+  linkType: soft
+
 "@my/ui@*, @my/ui@workspace:packages/ui":
   version: 0.0.0-use.local
   resolution: "@my/ui@workspace:packages/ui"
@@ -4346,6 +4346,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:4.20.9":
+  version: 4.20.9
+  resolution: "@tanstack/query-core@npm:4.20.9"
+  checksum: 679551353e6d5adcae771bc78b64959a6ecf4f85c1f74952b38b18a7425374cf84dc2e461cf6048be206d8bbac265468d36231f7f9d0b6689504a0e069dd5ac6
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^4.20.9":
+  version: 4.20.9
+  resolution: "@tanstack/react-query@npm:4.20.9"
+  dependencies:
+    "@tanstack/query-core": 4.20.9
+    use-sync-external-store: ^1.2.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-native: "*"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 4fc953d774c5c0f7f332f014dfb2fb9865387ae6e849fdf551e2ad70f07d55fbdbc4c6afb27a1f90bce3a2348bd1adf67ab78a4bc2cdf8d3e5ff90128730b467
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:2":
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
@@ -4359,6 +4385,36 @@ __metadata:
   peerDependencies:
     "@trpc/server": 10.7.0
   checksum: fb2abc442d8f326183250b9f1138bbc07cfc84ac17cc366b68c7c0c41857537060de986fdc6cf10b822555367adc4c3143d47ccf940ea3a02426c9576c1f9927
+  languageName: node
+  linkType: hard
+
+"@trpc/next@npm:^10.7.0":
+  version: 10.7.0
+  resolution: "@trpc/next@npm:10.7.0"
+  dependencies:
+    react-ssr-prepass: ^1.5.0
+  peerDependencies:
+    "@tanstack/react-query": ^4.3.8
+    "@trpc/client": 10.7.0
+    "@trpc/react-query": ^10.0.0-proxy-beta.21
+    "@trpc/server": 10.7.0
+    next: "*"
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 501a13bfa68908958721d9240f090d5ea312a34883ae832234a11f000d6587bcf74de6ccceafe226040837553a39b053e8b5d0138a132e45c42eaea8a54531b5
+  languageName: node
+  linkType: hard
+
+"@trpc/react-query@npm:^10.7.0":
+  version: 10.7.0
+  resolution: "@trpc/react-query@npm:10.7.0"
+  peerDependencies:
+    "@tanstack/react-query": ^4.3.8
+    "@trpc/client": 10.7.0
+    "@trpc/server": 10.7.0
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 7b7eb34ed00b201a9bcb8903811bccb6bf6a76dc27d89dd2d39ef6edc82505b4b3f79d873539ca01bdbfa54e8c1fe37a725abe95eedd2d3ff1522b49fb8e2a3b
   languageName: node
   linkType: hard
 
@@ -4969,6 +5025,9 @@ __metadata:
     "@tamagui/lucide-icons": ^1.0.2
     "@tamagui/shorthands": ^1.0.2
     "@tamagui/theme-base": ^1.0.2
+    "@tanstack/react-query": ^4.20.9
+    "@trpc/next": ^10.7.0
+    "@trpc/react-query": ^10.7.0
     expo-linking: ^3.2.3
     solito: 2.0.0-canary.4
   languageName: unknown
@@ -13015,6 +13074,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-ssr-prepass@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "react-ssr-prepass@npm:1.5.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: efe89b9f8b2053474613f56dfdbeb41d8ee2e572bf819a39377d95d3e4a9acf8a4a16e28d8d8034cb9ac2b316d11dc9e62217743e4322046d08175eb3b4fed3e
+  languageName: node
+  linkType: hard
+
 "react-style-singleton@npm:^2.2.1":
   version: 2.2.1
   resolution: "react-style-singleton@npm:2.2.1"
@@ -15318,7 +15386,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-sync-external-store@npm:^1.0.0":
+"use-sync-external-store@npm:^1.0.0, use-sync-external-store@npm:^1.2.0":
   version: 1.2.0
   resolution: "use-sync-external-store@npm:1.2.0"
   peerDependencies:

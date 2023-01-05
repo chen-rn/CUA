@@ -1,16 +1,24 @@
 import { Anchor, Button, H1, Input, Paragraph, Separator, Sheet, XStack, YStack } from '@my/ui'
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useLink } from 'solito/link'
+import { Platform } from 'react-native'
 import { SignedIn, SignedOut } from '@clerk/nextjs'
 import { SignIn, useAuth } from '@clerk/nextjs'
 
+import { trpc } from '../../utils/trpc'
+
 export function HomeScreen() {
   const { signOut } = useAuth()
-
   const linkProps = useLink({
     href: '/user/nate',
   })
+
+  const { data, isLoading, error } = trpc.entry.all.useQuery()
+
+  useEffect(() => {
+    console.log(error)
+  }, [isLoading])
 
   return (
     <YStack f={1} jc="center" ai="center" p="$4" space>

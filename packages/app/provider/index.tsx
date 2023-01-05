@@ -1,10 +1,3 @@
-import dotenv from 'dotenv'
-import path from 'path'
-
-dotenv.config({
-  path: path.join(__dirname, '..', '.env'),
-})
-
 import config from '../tamagui.config'
 import { NavigationProvider } from './navigation'
 import { TamaguiProvider, TamaguiProviderProps } from '@my/ui'

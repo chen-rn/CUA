@@ -16,6 +16,9 @@
     "@tamagui/lucide-icons": "^1.0.2",
     "@tamagui/shorthands": "^1.0.2",
     "@tamagui/theme-base": "^1.0.2",
+    "@tanstack/react-query": "^4.20.9",
+    "@trpc/next": "^10.7.0",
+    "@trpc/react-query": "^10.7.0",
     "expo-linking": "^3.2.3",
     "solito": "2.0.0-canary.4"
   }

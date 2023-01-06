@@ -7,7 +7,7 @@
 !.yarn/sdks
 !.yarn/versions
 .env
-
+yarn.lock
 # expo
 **/.expo/*
 

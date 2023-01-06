@@ -5,6 +5,7 @@ import { HomeScreen } from '../../features/home/screen'
 import { UserDetailScreen } from '../../features/user/detail-screen'
 import { SignInScreen } from '../../features/signin/screen'
 import { SignUpScreen } from '../../features/signup/screen'
+import { EmailVerificationScreen } from '../../features/signup/email-verification/screen'
 
 const Stack = createNativeStackNavigator<{
   home: undefined
@@ -13,6 +14,7 @@ const Stack = createNativeStackNavigator<{
   }
   signin: undefined
   signup: undefined
+  'email-verification': undefined
 }>()
 
 export function NativeNavigation() {
@@ -23,6 +25,7 @@ export function NativeNavigation() {
         component={HomeScreen}
         options={{
           title: 'Home',
+          headerShown: false,
         }}
       />
       <Stack.Screen
@@ -44,6 +47,13 @@ export function NativeNavigation() {
         component={SignUpScreen}
         options={{
           title: 'Sign Up',
+        }}
+      />
+      <Stack.Screen
+        name="email-verification"
+        component={EmailVerificationScreen}
+        options={{
+          title: 'Email Verification',
         }}
       />
     </Stack.Navigator>

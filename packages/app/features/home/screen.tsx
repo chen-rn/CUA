@@ -1,6 +1,5 @@
-import { Anchor, Button, H1, Input, Paragraph, Separator, Sheet, XStack, YStack } from '@my/ui'
+import { Anchor, Button, H1, Paragraph, Separator, Sheet, XStack, YStack } from '@my/ui'
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
-import { Stack } from '@my/ui'
 import React, { useState, useEffect } from 'react'
 import { useLink } from 'solito/link'
 import { trpc } from '../../utils/trpc'
@@ -23,10 +22,10 @@ export function HomeScreen() {
   useEffect(() => {
     console.log(data)
   }, [isLoading])
-
+  /* 
   if (isLoading) {
     return <Paragraph>Loading...</Paragraph>
-  }
+  } */
 
   if (error) {
     return <Paragraph>{error.message}</Paragraph>
@@ -74,13 +73,17 @@ export function HomeScreen() {
         </Button>
       </SignedIn>
       <XStack>
-        <Button {...userLinkProps} mr="$4">
+        <Button {...userLinkProps} theme={'red'} mr="$4">
           Link to User
         </Button>
-        <Stack>
-          <Button {...signInLinkProps}>Link to Sign In</Button>
-          <Button {...signUpLinkProps}>Link to Sign Up</Button>
-        </Stack>
+        <YStack>
+          <Button {...signInLinkProps} theme={'blue'}>
+            Link to Sign In
+          </Button>
+          <Button {...signUpLinkProps} theme={'gray'}>
+            Link to Sign Up
+          </Button>
+        </YStack>
       </XStack>
       <SheetDemo />
     </YStack>

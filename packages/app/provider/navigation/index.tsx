@@ -15,6 +15,7 @@ export function NavigationProvider({ children }: { children: React.ReactNode }) 
               'user-detail': 'user/:id',
               signin: 'signin',
               signup: 'signup',
+              'email-verification': 'signup/email-verification',
             },
           },
         }),

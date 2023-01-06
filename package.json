@@ -6,9 +6,9 @@
     "packages/*"
   ],
   "scripts": {
+    "web": "dotenv -- turbo run dev --filter next-app",
     "native": "cd apps/expo && yarn start",
     "watch": "yarn workspaces foreach -pi run watch",
-    "web": "yarn build && cd apps/next && yarn next",
     "web:extract": "DISABLE_EXTRACTION=false yarn workspace next-app dev",
     "web:prod": "yarn workspace next-app build",
     "web:prod:serve": "yarn workspace next-app serve",
@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.18.9",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "dotenv-cli": "^6.0.0"
   },
   "devDependencies": {
     "@manypkg/cli": "^0.19.1",

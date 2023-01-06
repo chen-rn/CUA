@@ -1,0 +1,113 @@
+import { useState } from 'react'
+import { YStack, Paragraph, XStack, Button, Input, Image, Stack } from '@my/ui'
+import { Link } from 'solito/link'
+import { OAuthStrategy } from '@clerk/types'
+
+interface Props {
+  type: 'sign-up' | 'sign-in'
+  handleOAuthWithPress: (strategy: OAuthStrategy) => void
+  handleEmailWithPress: (emailAddress, password) => void
+}
+
+export const SignUpSignInComponent: React.FC<Props> = ({
+  type,
+  handleOAuthWithPress,
+  handleEmailWithPress,
+}) => {
+  const [emailAddress, setEmailAddress] = useState('')
+  const [password, setPassword] = useState('')
+
+  return (
+    <YStack
+      borderRadius="$10"
+      space
+      px="$7"
+      py="$6"
+      w={350}
+      shadowColor={'#000'}
+      shadowOpacity={0.1}
+      shadowRadius={26}
+      shadowOffset={{ width: 0, height: 4 }}
+      bg="white"
+    >
+      <Paragraph size="$5" fontWeight={'700'} opacity={0.8} mb="$1">
+        {type === 'sign-up' ? 'Create your account' : 'Log in to your account'}
+      </Paragraph>
+      {/* all the oauth sign up options */}
+      <XStack space jc={'space-evenly'}>
+        {/* 3 buttons, for google, apple, discord */}
+        <Button
+          size="$5"
+          bg="white"
+          borderColor={'#00000015'}
+          onPress={() => handleOAuthWithPress('oauth_google')}
+        >
+          <Image src="https://images.clerk.dev/static/google.svg" width={20} height={20} />
+        </Button>
+        <Button
+          size="$5"
+          bg="white"
+          borderColor={'#00000015'}
+          onPress={() => handleOAuthWithPress('oauth_apple')}
+        >
+          <Image src="https://images.clerk.dev/static/apple.svg" width={20} height={20} />
+        </Button>
+        <Button
+          size="$5"
+          bg="white"
+          borderColor={'#00000015'}
+          onPress={() => handleOAuthWithPress('oauth_discord')}
+        >
+          <Image src="https://images.clerk.dev/static/discord.svg" width={20} height={20} />
+        </Button>
+      </XStack>
+      <XStack ai="center" width="100%" jc="space-between">
+        <Stack h="$0.25" bg="black" w="$10" opacity={0.1} />
+        <Paragraph size="$3" opacity={0.5}>
+          or
+        </Paragraph>
+        <Stack h="$0.25" bg="black" w="$10" opacity={0.1} />
+      </XStack>
+
+      {/* email sign up option */}
+      <Input
+        placeholder="Email"
+        onChangeText={(text) => {
+          setEmailAddress(text)
+        }}
+      />
+      <Input
+        placeholder="Password"
+        onChangeText={(text) => {
+          setPassword(text)
+        }}
+        textContentType="password"
+      />
+
+      {/* sign up button */}
+      <Button
+        themeInverse
+        onPress={() => {
+          handleEmailWithPress(emailAddress, password)
+        }}
+        hoverStyle={{ opacity: 0.8 }}
+        onHoverIn={() => {}}
+        onHoverOut={() => {}}
+      >
+        Sign up
+      </Button>
+
+      {/* or sign in, in small and less opaque font */}
+      <XStack>
+        <Paragraph size="$2" mr="$2" opacity={0.4}>
+          {type === 'sign-up' ? 'Already have an account?' : 'Don’t have an account?'}
+        </Paragraph>
+        <Link href={type === 'sign-up' ? '/signin' : '/signup'}>
+          <Paragraph cursor={'pointer'} size="$2" fontWeight={'700'} opacity={0.5}>
+            {type === 'sign-up' ? 'Sign in' : 'Sign up'}
+          </Paragraph>
+        </Link>
+      </XStack>
+    </YStack>
+  )
+}

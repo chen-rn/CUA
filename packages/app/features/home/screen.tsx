@@ -34,7 +34,7 @@ export function HomeScreen() {
 
   return (
     <YStack f={1} jc="center" ai="center" p="$4" space>
-      <YStack space="$4" maw={600}>
+      <YStack space="$4" maw={600} px={'$3'}>
         <H1 ta="center">create-universal-app</H1>
         <Paragraph ta="left">
           This is a demo for create-universal-app. To read more about the philosophy behind it,
@@ -46,14 +46,11 @@ export function HomeScreen() {
           >
             https://github.com/chen-rn/create-universal-app
           </Anchor>{' '}
-          and give it a ⭐️ on github!
+          (give it a ⭐️ if you like it!)
         </Paragraph>
-        <Separator />
         <Paragraph>
-          On a high level, this is a template designed for you to build a universal app(web +
-          mobile) in one code base without sacrificing 1. Performance and 2. Developer Experience.
-          It uses Expo, Next, Solito, tRPC, Tamagui, Clerk, and Prisma. If you're a beginner and is
-          a little overwhelmed, I've also made a{' '}
+          This template uses Expo, Next, Solito, tRPC, Tamagui, Clerk, and Prisma. If you're a
+          beginner and is a little overwhelmed, I've also made a{' '}
           <Anchor
             color="$color12"
             href="https://www.youtube.com/watch?v=6Z4p-qjnKCQ"
@@ -68,29 +65,27 @@ export function HomeScreen() {
 
       <H3 ta="center">Some Demos</H3>
       <YStack p={'$2'}>
-        <Paragraph>TRPC Demo</Paragraph>
+        <Paragraph>tRPC Query Demo</Paragraph>
         {data?.map((entry) => (
-          <Paragraph key={entry.id}>{entry.id}</Paragraph>
+          <Paragraph opacity={0.5} key={entry.id}>
+            {entry.id}
+          </Paragraph>
         ))}
       </YStack>
 
       <XStack space>
-        <Paragraph>Routing Demo</Paragraph>
         <Button {...userLinkProps} theme={'gray'}>
-          User Page
+          User Page(Routing)
         </Button>
       </XStack>
 
       <XStack space ai="center">
-        <Paragraph>Clerk/Auth Demo</Paragraph>
-        <YStack space>
-          <Button {...signInLinkProps} theme={'gray'}>
-            Sign In
-          </Button>
-          <Button {...signUpLinkProps} theme={'gray'}>
-            Sign Up
-          </Button>
-        </YStack>
+        <Button {...signInLinkProps} theme={'gray'}>
+          Sign In(Clerk)
+        </Button>
+        <Button {...signUpLinkProps} theme={'gray'}>
+          Sign Up(Clerk)
+        </Button>
       </XStack>
 
       <SignedIn>
@@ -102,44 +97,6 @@ export function HomeScreen() {
           Sign Out
         </Button>
       </SignedIn>
-      <SheetDemo />
     </YStack>
-  )
-}
-
-function SheetDemo() {
-  const [open, setOpen] = useState(false)
-  const [position, setPosition] = useState(0)
-  return (
-    <>
-      <Button
-        size="$6"
-        icon={open ? ChevronDown : ChevronUp}
-        circular
-        onPress={() => setOpen((x) => !x)}
-      />
-      <Sheet
-        modal
-        open={open}
-        onOpenChange={setOpen}
-        snapPoints={[80]}
-        position={position}
-        onPositionChange={setPosition}
-        dismissOnSnapToBottom
-      >
-        <Sheet.Overlay />
-        <Sheet.Frame ai="center" jc="center">
-          <Sheet.Handle />
-          <Button
-            size="$6"
-            circular
-            icon={ChevronDown}
-            onPress={() => {
-              setOpen(false)
-            }}
-          />
-        </Sheet.Frame>
-      </Sheet>
-    </>
   )
 }

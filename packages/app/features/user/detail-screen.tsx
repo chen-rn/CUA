@@ -13,7 +13,7 @@ export function UserDetailScreen() {
   return (
     <YStack f={1} jc="center" ai="center" space>
       <Paragraph ta="center" fow="800">{`User ID: ${id}`}</Paragraph>
-      <Button {...linkProps} icon={ChevronLeft}>
+      <Button {...linkProps} icon={ChevronLeft} theme="gray">
         Go Home
       </Button>
     </YStack>

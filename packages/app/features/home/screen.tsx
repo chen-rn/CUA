@@ -1,10 +1,9 @@
-import { Anchor, Button, H1, Paragraph, Separator, Sheet, Text, XStack, YStack } from '@my/ui'
-import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
-import React, { useState, useEffect } from 'react'
+import { Anchor, Button, H1, Paragraph, Separator, XStack, YStack } from '@my/ui'
+import React, { useEffect } from 'react'
 import { useLink } from 'solito/link'
 import { trpc } from '../../utils/trpc'
-import { SignedIn, SignedOut, useAuth, useSignIn, useSignUp } from '../../utils/clerk'
-import { Card, CardHeader, H3, Image } from 'tamagui' // or @tamagui/card
+import { SignedIn, useAuth } from '../../utils/clerk'
+import { H3 } from 'tamagui' // or @tamagui/card
 
 export function HomeScreen() {
   const { signOut, userId } = useAuth()

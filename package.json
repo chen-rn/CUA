@@ -13,6 +13,7 @@
     "web:prod": "yarn workspace next-app build",
     "web:prod:serve": "yarn workspace next-app serve",
     "postinstall": "yarn build",
+    "generate": "cd packages/db && prisma generate",
     "build": "cd packages/ui && yarn run build",
     "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader"
   },

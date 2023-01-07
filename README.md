@@ -58,9 +58,9 @@ This is an opinionated template for creating universal(mobile + web codeshare) a
 After you've duplicated the repo and cloned it, we need to make sure your Yarn is set up properly for monorepos.
 
 ### 1. Set up yarn
-- make sure we are on 3 `yarn set version stable`
-- add in a workspace plugin `yarn plugin import workspace-tools`
-- make sure we are not using the default plug n play `yarn config set nodeLinker node-modules`
+- `yarn set version stable` make sure we are on 3 
+- `yarn plugin import workspace-tools` add in a workspace plugin 
+- `yarn config set nodeLinker node-modules` make sure we are not using the default plug n play 
 
 ### 2. Set up project properly
 - install packages by running `yarn` (this will also auto build our projects)

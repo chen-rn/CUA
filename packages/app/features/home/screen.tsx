@@ -61,7 +61,7 @@ export function HomeScreen() {
           made a{" "}
           <Anchor
             color="$color12"
-            href="https://www.youtube.com/watch?v=6Z4p-qjnKCQ"
+            href="https://youtu.be/aTEv0-ZBbWk"
             target="_blank"
           >
             video

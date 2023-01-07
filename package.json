@@ -6,13 +6,15 @@
     "packages/*"
   ],
   "scripts": {
-    "web": "dotenv -- turbo run dev --filter next-app",
+    "web": "yarn build && dotenv -- turbo run dev --filter next-app",
     "native": "cd apps/expo && yarn start",
     "watch": "yarn workspaces foreach -pi run watch",
     "web:extract": "DISABLE_EXTRACTION=false yarn workspace next-app dev",
     "web:prod": "yarn workspace next-app build",
     "web:prod:serve": "yarn workspace next-app serve",
     "postinstall": "yarn build",
+    "generate": "cd packages/db && prisma generate",
+    "studio": " cd packages/db && prisma studio",
     "build": "yarn workspaces foreach --exclude next-app -pi run build",
     "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader"
   },

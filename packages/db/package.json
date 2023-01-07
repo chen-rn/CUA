@@ -5,12 +5,19 @@
   "main": "./index.ts",
   "types": "./index.ts",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "prisma:generate": "prisma generate",
+    "prisma:studio": "prisma studio",
+    "prisma:migrate": "prisma migrate",
+    "prisma:migrate:dev": "prisma migrate dev"
+  },
   "dependencies": {
-    "@prisma/client": "^4.6.1"
+    "@prisma/client": "latest"
   },
   "devDependencies": {
     "dotenv-cli": "^6.0.0",
-    "prisma": "^4.6.1",
+    "prisma": "latest",
     "typescript": "^4.9.3"
   }
 }

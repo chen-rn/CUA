@@ -1,4 +1,4 @@
-# 🌌 create-universal-app(🏗️ WIP)
+# 🌌 create-universal-app(🏗v0 complete)
 
 ## 🤨 What is this?
 

@@ -15,15 +15,31 @@ This is an opinionated template for creating universal(mobile + web codeshare) a
 - [tamagui + solito starter](https://github.com/tamagui/tamagui/tree/master/starters/next-expo-solito)(expo + next code share, but no tRPC, no built in auth)
 
 ## 🌟 How it works
+### Folder Structure
+- apps
+  - next
+  - expo
+- packages
+  - ui (your reusable components/tamagui)
+  - db (db schema, prisma stuff)
+  - app
+    - features (basically all of your frontend code in React Native will go here ⭐️⭐️⭐️) 
+    - navigation (unifying web + mobile nav)
+    - provider (unifying providers)
+    - utils (your utils ie. auth/trpc)
+  - api (all of your tRPC/backend code)
 
-- Your **frontend** code will be coded in React Native Web inside of /packages/UI, meaning that you're going to write Views instead of divs.(Note: since we are using Tamagui, we're gonna write XStacks instead Views)
+### In a bit more detail
+- Your **frontend** code will be coded in React Native, meaning that you're going to write Views instead of divs.(Note: since we are using Tamagui, we're gonna write Stacks instead Views)
+  - apps/expo and apps/next are practically empty folders that are simply _referencing_ your packages/app folder.
   - If you're familiar with React Native, it's going to feel as if you're writing a React Native app, that just happens to also run really well on the web(with SSR and all of those goodies).
-  - This code will get rendered to HTML/CSS on the NextJS side and normal RN code on the Expo side.(with the help of Solito)
-- Your **backend** code is gonna be in "packages/api". This code is actually gonna get ran by your web framework NextJS, in the backend. If you're a little confused about how that works, [here's](https://www.youtube.com/watch?v=2cB5Fh46Vi4&t=1017s) a good video by Theo that talks about NextJS as a backend framework.
-  - Also note, you don't need to understanding how everything works in detail before you can start using something like this. As someone that wants to know how every bolt and nut works, I often get "blocked" by my own perfectionism, so I'm just throwing this out there in case you're feeling the same about something.
+  - Your code will get rendered as HTML/CSS on the NextJS side and normal React Native on the Native side.
+- Your **backend** code is gonna be in "packages/api". This code is actually gonna get ran by NextJS in a serverless environment. If you're a little confused about how that works, [here's](https://www.youtube.com/watch?v=2cB5Fh46Vi4&t=1017s) a good video by Theo that talks about NextJS as a backend framework.
 - Your backend and frontend will communicate with tRPC.
 - Your backend and your DB will communicate with Prisma(ORM).
 - Mobile auth is done with Clerk Expo, and web auth is done with Clerk React and Clerk Next.
+
+_Note: you don't need to understanding how everything works in detail before you can start using something like this. As someone that wants to know how every bolt and nut works, I often get "blocked" by my own perfectionism, so I'm just throwing this out there in case you're feeling the same about something._
 
 ## 💭 Behind the decisions
 

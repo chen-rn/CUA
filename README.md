@@ -4,7 +4,7 @@
 
 This is an opinionated template for creating universal(mobile + web codeshare) apps with built in auth for both mobile and web using Expo(mobile), Next(web), tRPC, Prisma, Tamagui(ui/styling), and Clerk(mobile + web auth).
 
-**Giants whom we are standing on the shoulders of**
+**This repo is made on top of**
 
 - [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo)(expo, next, trpc, prisma, nextauth - all in one, but no UI code share, no mobile auth)
 - [t3-turbo-and-clerk](https://github.com/clerkinc/t3-turbo-and-clerk)(t3 turbo, but with auth for mobile + web, still no code share for UI)

@@ -52,3 +52,36 @@ This is an opinionated template for creating universal(mobile + web codeshare) a
 **Which DB?**
 
 - I recommend either spin up a postgres instance on Railway or use Supabase, doesn't matter too much IMO.
+
+
+## 🔨 How to use this? Step by step tutorial.
+After you've duplicated the repo and cloned it, we need to make sure your Yarn is set up properly for monorepos.
+
+### 1. Set up yarn
+- make sure we are on 3 `yarn set version stable`
+- add in a workspace plugin `yarn plugin import workspace-tools`
+- make sure we are not using the default plug n play `yarn config set nodeLinker node-modules`
+
+### 2. Set up project properly
+- install packages by running `yarn` (this will also auto build our projects)
+- generate your prisma client by running `yarn generate`
+- set up your environment variables properly by duplicating the .env.example page, removing .example, and entering your environment variables.
+  - Clerk API: sign up clerk
+  - DATABASE_URL: spin up a postgres instance with Railway or Supabase
+- you'll also need to manually enter your clerk frontend api into /packages/app/provider/auth/index.tsx(you can also global search //ENTER YOUR ENV HERE)
+
+### 3. Start up your project!
+- `yarn web` for web dev
+- `yarn native` to run on iOS or Android
+- `yarn studio` to start up your prisma studio
+
+### 4. Starting your project!
+- Put your screens in packages/app/features
+- For smaller components, feel free to put them in /packages/ui
+- For new routes, add them in /packages/api/src/router, and make sure you merge them in index.ts
+- When you add a new page or screen, you'll need to add the page into both Expo and Next by
+  - Expo
+    - Go to packages/app/navigation/native/index.tsx and add the page in there following the example
+    - Go to packages/app/provider/navigation/index.tsx and add the page in there following the example
+  - Next
+    - Go to apps/next/pages, create the folder with the name being your route, and an index.tsx that's importing your element from /app/feature/home

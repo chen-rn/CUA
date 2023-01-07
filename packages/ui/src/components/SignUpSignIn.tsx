@@ -36,7 +36,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({
       shadowOpacity={0.1}
       shadowRadius={26}
       shadowOffset={{ width: 0, height: 4 }}
-      bg="white"
+      bg="$background"
     >
       <Paragraph size="$5" fontWeight={"700"} opacity={0.8} mb="$1">
         {type === "sign-up" ? "Create your account" : "Log in to your account"}
@@ -46,38 +46,40 @@ export const SignUpSignInComponent: React.FC<Props> = ({
         {/* 3 buttons, for google, apple, discord */}
         <Button
           size="$5"
-          bg="white"
-          borderColor={"#00000015"}
+          bg="$backgroundTransparent"
+          borderColor={"$gray6Light"}
           onPress={() => handleOAuthWithPress("oauth_google")}
         >
           <Image
-            src="https://images.clerk.dev/static/google.svg"
+            src="https://qwvsfvhphdefqfyuuhlb.supabase.co/storage/v1/object/public/logos/Google%20logo.png"
             width={20}
             height={20}
           />
         </Button>
         <Button
           size="$5"
-          bg="white"
-          borderColor={"#00000015"}
+          bg="$backgroundTransparent"
+          borderColor={"$gray6Light"}
           onPress={() => handleOAuthWithPress("oauth_apple")}
         >
           <Image
-            src="https://images.clerk.dev/static/apple.svg"
-            width={20}
-            height={20}
+            src="https://qwvsfvhphdefqfyuuhlb.supabase.co/storage/v1/object/public/logos/Apple%20logo.png"
+            width={22}
+            height={22}
+            resizeMode="contain"
           />
         </Button>
         <Button
           size="$5"
-          bg="white"
-          borderColor={"#00000015"}
+          bg="$backgroundTransparent"
+          borderColor={"$gray6Light"}
           onPress={() => handleOAuthWithPress("oauth_discord")}
         >
           <Image
-            src="https://images.clerk.dev/static/discord.svg"
-            width={20}
-            height={20}
+            src="https://qwvsfvhphdefqfyuuhlb.supabase.co/storage/v1/object/public/logos/Discord%20logo.png"
+            width={25}
+            height={22}
+            resizeMode="contain"
           />
         </Button>
       </XStack>
@@ -102,6 +104,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({
           setPassword(text);
         }}
         textContentType="password"
+        secureTextEntry
       />
 
       {/* sign up button */}
@@ -114,7 +117,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({
         onHoverIn={() => {}}
         onHoverOut={() => {}}
       >
-        Sign up
+        {type === "sign-up" ? "Sign up" : "Sign in"}
       </Button>
 
       {/* or sign in, in small and less opaque font */}

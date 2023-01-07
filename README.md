@@ -4,7 +4,7 @@
 https://user-images.githubusercontent.com/36214945/211167187-347b87ce-1c03-4678-9904-542aa78ab131.mp4
 
 
-## 🤨 What is this?
+## 🌌 What is this?
 [Here's](https://youtu.be/aTEv0-ZBbWk) a 15 minute video going over everything if that's more of your style!
 
 This is an opinionated template for creating fullstack universal(mobile + web codeshare) apps with built in auth for both mobile and web using Expo(mobile), Next(web), tRPC, Prisma, Tamagui(ui/styling), and Clerk(mobile + web auth).

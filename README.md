@@ -81,12 +81,14 @@ After you've duplicated the repo and cloned it, we need to make sure your Yarn i
 - `yarn config set nodeLinker node-modules` make sure we are not using the default plug n play 
 
 ### 2. Set up project properly
-- install packages by running `yarn` (this will also auto build our projects)
-- generate your prisma client by running `yarn generate`
+- `yarn` install packages and build the project
+- `yarn generate` generate your prisma client!
 - set up your environment variables properly by duplicating the .env.example page, removing .example, and entering your environment variables.
   - Clerk API: sign up clerk
   - DATABASE_URL: spin up a postgres instance with Railway or Supabase
 - you'll also need to manually enter your clerk frontend api into /packages/app/provider/auth/index.tsx(you can also global search //ENTER YOUR ENV HERE)
+- `yarn db-push` push our schema to our DB
+
 
 ### 3. Start up your project!
 - `yarn web` for web dev

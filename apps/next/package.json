@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "cd .. && yarn build && cd next && next build",
+    "clean": "rm -rf .next .turbo node_modules",
     "start": "next start",
     "serve": "NODE_ENV=production next start --port 8151",
     "lint": "next lint"

@@ -10,7 +10,12 @@
     "prisma:generate": "prisma generate",
     "prisma:studio": "prisma studio",
     "prisma:migrate": "prisma migrate",
-    "prisma:migrate:dev": "prisma migrate dev"
+    "prisma:migrate:dev": "prisma migrate dev",
+    "clean": "rm -rf .turbo node_modules",
+    "with-env": "dotenv -e ../../.env --",
+    "dev": "yarn with-env prisma studio --port 5556",
+    "db-push": "yarn with-env prisma db push",
+    "db-generate": "yarn with-env prisma generate"
   },
   "dependencies": {
     "@prisma/client": "latest"

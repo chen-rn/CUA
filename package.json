@@ -13,12 +13,10 @@
     "clean": "rm -rf node_modules",
     "clean:workspaces": "turbo clean",
     "postinstall": "yarn build",
-    "db-generate": "turbo db-generate",
+    "build": "yarn workspaces foreach --exclude next-app -pi run build",
     "db-push": "turbo db-push",
-    "dev": "turbo dev --parallel",
     "generate": "cd packages/db && prisma generate",
     "studio": " cd packages/db && prisma studio",
-    "build": "yarn workspaces foreach --exclude next-app -pi run build",
     "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader"
   },
   "resolutions": {

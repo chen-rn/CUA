@@ -2,7 +2,7 @@
 1. a CLI `npx create-universal-app`
 2. different variation with Nativewind
 3. different variation with different Auth solutions
-4. create a landing page createuniversalapp.com
+4. create a landing page with docs/tutorials -> createuniversalapp.com
 5. React Native for Windows
 
 ## ❤️ Smaller Features

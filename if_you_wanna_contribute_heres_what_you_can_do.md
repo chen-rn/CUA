@@ -5,7 +5,7 @@
 4. create a landing page createuniversalapp.com
 5. React Native for Windows
 
-# ❤️ Smaller Features
+## ❤️ Smaller Features
 1. create user in the DB after sign up -- davidR#7547
 2. add example fetching data that belongs to a particular user
 3. deploy an example app with this stack

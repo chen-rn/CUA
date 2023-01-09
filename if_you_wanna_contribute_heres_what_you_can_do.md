@@ -6,6 +6,7 @@
 5. React Native for Windows
 
 # ✈️ Smaller Features
-1. add example to show a data from a protected route after signing in
-2. deploy an example app with this stack
-3. clean up codebase(the package.jsons are a little messy)
+1. create user in the DB after sign up
+2. add example fetching data that belongs to a particular user
+3. deploy an example app with this stack
+4. clean up codebase(the package.jsons are a little messy)

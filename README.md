@@ -1,4 +1,4 @@
-# 🌌 create-universal-app
+# 🌌 create-universal-app(CUA)
 
 ### Video Demo
 https://user-images.githubusercontent.com/36214945/211167187-347b87ce-1c03-4678-9904-542aa78ab131.mp4

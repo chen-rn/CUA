@@ -15,8 +15,8 @@
     "postinstall": "yarn build",
     "build": "yarn workspaces foreach --exclude next-app -pi run build",
     "db-push": "turbo db-push",
-    "generate": "cd packages/db && prisma generate",
-    "studio": " cd packages/db && prisma studio",
+    "generate": "cd packages/db && yarn prisma generate",
+    "studio": " cd packages/db && yarn prisma studio",
     "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader"
   },
   "resolutions": {

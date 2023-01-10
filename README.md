@@ -5,10 +5,9 @@ https://user-images.githubusercontent.com/36214945/211167187-347b87ce-1c03-4678-
 
 
 ## 🌌 What is this?
-[Here's](https://youtu.be/aTEv0-ZBbWk) a 20 minute Youtube tutorial going over everything if that's more of your style!
-(using Expo, Next, tRPC, Prisma, Tamagui, Clerk Auth)
-
 create-universal-app is an opinionated template for creating fullstack universal(mobile + web codeshare) apps with built in auth for both mobile and web using **Expo**(mobile), **Nextjs**(web), **tRPC**, **Prisma**, **Tamagui**(ui/styling), and **Clerk**(mobile + web auth).
+
+[Here's](https://youtu.be/aTEv0-ZBbWk) a 20 minute Youtube tutorial going over everything if that's more of your style!
 
 **This repo is made on top of**
 

@@ -6,7 +6,7 @@
 5. React Native for Windows
 
 ## ❤️ Smaller Features
-1. create user in the DB after sign up -- davidR#7547
+1. <s>create user in the DB after sign up -- davidR#7547(DONE)</s>
 2. add example fetching data that belongs to a particular user
 3. deploy an example app with this stack
 4. clean up codebase(the package.jsons are a little messy)

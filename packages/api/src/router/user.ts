@@ -12,7 +12,7 @@ export const userRouter = router({
       z.object({
         email: z.string(),
         id: z.string(),
-      }),
+      })
     )
     .mutation(({ ctx, input }) => {
       //create user and link it to the user

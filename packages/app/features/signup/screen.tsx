@@ -4,11 +4,13 @@ import { useSignUp } from "app/utils/clerk";
 import { OAuthStrategy } from "@clerk/types";
 import { useRouter } from "solito/router";
 import { SignUpSignInComponent } from "@my/ui/src/components/SignUpSignIn";
+import { trpc } from "app/utils/trpc";
 
 export function SignUpScreen() {
   const { push } = useRouter();
 
   const { isLoaded, signUp, setSession } = useSignUp();
+  const createUserMutation = trpc.user.create.useMutation();
 
   if (!setSession) return null;
   if (!isLoaded) return null;
@@ -17,6 +19,11 @@ export function SignUpScreen() {
     await handleOAuthSignUp(strategy, setSession, signUp);
     if (signUp.status == "complete") {
       push("/");
+      /* add user id and email into our database */
+      createUserMutation.mutate({
+        id: signUp.createdUserId!,
+        email: signUp.emailAddress!,
+      });
     }
   };
 

@@ -13,6 +13,11 @@
       "dependsOn": ["^db-generate"],
       "cache": false
     },
+    "studio": {
+      "inputs": ["prisma/schema.prisma"],
+
+      "cache": false
+    },
     "build": {
       "dependsOn": ["^build", "^db-generate"],
       "outputs": [".next/**", ".expo/**"]

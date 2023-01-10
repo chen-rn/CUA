@@ -3,10 +3,12 @@ import { useState } from "react";
 import { Button, Input, YStack } from "@my/ui";
 import { useAuth, useSignUp } from "app/utils/clerk";
 import { useRouter } from "solito/router";
+import { trpc } from "app/utils/trpc";
 
 export function EmailVerificationScreen() {
   const { push } = useRouter();
   const [verificationCode, setVerificationCode] = useState("");
+  const createUserMutation = trpc.user.create.useMutation();
 
   const { signUp, setSession } = useSignUp();
   if (!signUp) return null;
@@ -16,6 +18,11 @@ export function EmailVerificationScreen() {
     await signUp.attemptEmailAddressVerification({ code: verificationCode });
 
     if (signUp.status === "complete") {
+      /* add user id and email into our database */
+      createUserMutation.mutate({
+        id: signUp.createdUserId!,
+        email: signUp.emailAddress!,
+      });
       push("/");
       const { createdSessionId } = signUp;
       if (createdSessionId) {

@@ -11,7 +11,7 @@ import React, { useEffect } from "react";
 import { useLink } from "solito/link";
 import { trpc } from "../../utils/trpc";
 import { SignedIn, SignedOut, useAuth } from "../../utils/clerk";
-import { H3 } from "tamagui"; // or @tamagui/card
+import { H3 } from "tamagui"; // or @tamagui/text
 
 export function HomeScreen() {
   const { signOut, userId } = useAuth();

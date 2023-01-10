@@ -2,6 +2,7 @@ import {
   Anchor,
   Button,
   H1,
+  H3,
   Paragraph,
   Separator,
   XStack,
@@ -11,7 +12,6 @@ import React, { useEffect } from "react";
 import { useLink } from "solito/link";
 import { trpc } from "../../utils/trpc";
 import { SignedIn, SignedOut, useAuth } from "../../utils/clerk";
-import { H3 } from "tamagui"; // or @tamagui/card
 
 export function HomeScreen() {
   const { signOut, userId } = useAuth();

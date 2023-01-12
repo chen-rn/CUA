@@ -4,7 +4,7 @@ import { router, publicProcedure, protectedProcedure } from "../trpc";
 import { z } from "zod";
 
 export const userRouter = router({
-  current: protectedProcedure.input(z.string()).query(({ ctx }) => {
+  current: protectedProcedure.query(({ ctx }) => {
     return ctx.prisma.user.findFirst({ where: { id: ctx.user.id } });
   }),
   create: protectedProcedure

@@ -7,7 +7,11 @@ https://user-images.githubusercontent.com/36214945/211167187-347b87ce-1c03-4678-
 ## 🌌 What is this?
 **create-universal-app (CUA)** is an opinionated template for creating fullstack universal (mobile + web codeshare) apps with built in auth for both mobile and web using **Expo** (mobile), **Nextjs** (web), **tRPC**, **Prisma**, **Tamagui** (ui/styling), and **Clerk** (mobile + web auth).
 
+
+
 [Here's](https://youtu.be/aTEv0-ZBbWk) a 20 minute Youtube tutorial going over everything if that's more of your style!
+
+live demo: https://cua-next-delta.vercel.app/
 
 **This repo is made on top of**
 
@@ -105,3 +109,12 @@ After you've duplicated the repo and cloned it, we need to make sure your Yarn i
     - Go to `packages/app/provider/navigation/index.tsx` and add the page in there following the example
   - Next
     - Go to `apps/next/pages`, create the folder with the name being your route, and an `index.tsx` that's importing your element from `/app/feature/home`
+
+## Deploying the web app to Vercel
+After you create a new project, and link it with your github repo, you'll have to
+- Override the default install command with `yarn set version stable && yarn install`
+- Enter your environment variable `NEXT_PUBLIC_CLERK_FRONTEND_API`
+
+Photo reference 👇👇
+
+<img width="704" alt="Screenshot 2023-01-14 at 12 06 17 AM" src="https://user-images.githubusercontent.com/36214945/212462681-f6cc448b-d24b-4541-a350-290a6985ad85.png">

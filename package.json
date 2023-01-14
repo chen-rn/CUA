@@ -6,6 +6,9 @@
     "packages/*"
   ],
   "packageManager": "yarn@3.3.1",
+  "prisma": {
+    "schema": "./packages/db/prisma/schema.prisma"
+  },
   "scripts": {
     "web": "turbo run dev --filter next",
     "native": "cd apps/expo && yarn start",

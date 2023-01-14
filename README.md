@@ -11,7 +11,7 @@ https://user-images.githubusercontent.com/36214945/211167187-347b87ce-1c03-4678-
 
 [Here's](https://youtu.be/aTEv0-ZBbWk) a 20 minute Youtube tutorial going over everything if that's more of your style!
 
-live demo: https://cua-template.vercel.app/
+live demo: https://cua-demo.vercel.app/
 
 **This repo is made on top of**
 

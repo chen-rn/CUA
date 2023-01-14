@@ -7,7 +7,7 @@
   ],
   "packageManager": "yarn@3.3.1",
   "scripts": {
-    "web": "turbo run dev --filter next-app",
+    "web": "turbo run dev --filter next",
     "native": "cd apps/expo && yarn start",
     "build": "turbo build",
     "clean": "rm -rf node_modules",

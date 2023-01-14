@@ -81,7 +81,7 @@ After you've duplicated the repo and cloned it, we need to make sure your Yarn i
 
 ### 1. Set up yarn
 - `yarn set version stable` make sure we are on 3 
-- `yarn plugin import workspace-tools` add in a workspace plugin 
+- <s>`yarn plugin import workspace-tools` add in a workspace plugin(don't need anymore) </s>
 - `yarn config set nodeLinker node-modules` make sure we are not using the default plug n play 
 
 ### 2. Set up project properly

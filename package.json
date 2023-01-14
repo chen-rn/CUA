@@ -13,6 +13,7 @@
     "clean": "rm -rf node_modules",
     "clean:workspaces": "turbo clean",
     "db-push": "turbo db-push",
+    "postinstall": "yarn generate",
     "generate": "cd packages/db && yarn prisma generate",
     "studio": " cd packages/db && yarn prisma:studio",
     "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader"

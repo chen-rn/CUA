@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "cd .. && yarn build && cd next && next build",
+    "dev": "yarn with-env next dev",
+    "build": "yarn with-env next build",
+    "with-env": "dotenv -e ../../.env --",
     "clean": "rm -rf .next .turbo node_modules",
     "start": "next start",
     "serve": "NODE_ENV=production next start --port 8151",

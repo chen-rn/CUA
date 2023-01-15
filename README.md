@@ -13,6 +13,8 @@ https://user-images.githubusercontent.com/36214945/211167187-347b87ce-1c03-4678-
 
 live demo: https://cua-demo.vercel.app/
 
+`npx create-t3-universal-app` - you can also run this to start your project!([by albbus](https://github.com/albbus-stack/create-t3-universal-app))
+
 **This repo is made on top of**
 
 - [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo) (expo, next, trpc, prisma, nextauth - all in one, but no UI code share, no mobile auth)

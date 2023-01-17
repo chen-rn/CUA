@@ -115,6 +115,7 @@ After you've duplicated the repo and cloned it, we need to make sure your Yarn i
 ## Deploying the web app to Vercel
 After you create a new project, and link it with your github repo, you'll have to
 - Override the default install command with `yarn set version stable && yarn install`
+- Override the default build command with `cd ../.. && yarn run build --filter=nextjs...`
 - Enter your environment variables
   - `NEXT_PUBLIC_CLERK_FRONTEND_API`
   - `DATABASE_URL`

@@ -10,7 +10,7 @@
     "schema": "./packages/db/prisma/schema.prisma"
   },
   "scripts": {
-    "web": "turbo run dev --filter next",
+    "web": "turbo run dev --filter nextjs",
     "native": "cd apps/expo && yarn start",
     "build": "turbo build",
     "clean": "rm -rf node_modules",

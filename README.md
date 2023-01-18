@@ -11,9 +11,9 @@ https://user-images.githubusercontent.com/36214945/211167187-347b87ce-1c03-4678-
 
 [Here's](https://youtu.be/aTEv0-ZBbWk) a 20 minute Youtube tutorial going over everything if that's more of your style!
 
-live demo: https://cua-demo.vercel.app/
+Live Demo: https://cua-demo.vercel.app/
 
-[Our Discord](https://discord.gg/5HvtckjyYb)
+[👾👾Our Discord👾👾](https://discord.gg/5HvtckjyYb)
 
 `npx create-t3-universal-app` - you can also run this to start your project!([by albbus](https://github.com/albbus-stack/create-t3-universal-app))
 

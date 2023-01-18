@@ -98,7 +98,7 @@ After you've duplicated the repo and cloned it, we need to make sure your Yarn i
 
 ### 3. Start up your project!
 - `yarn web` for web dev
-- `yarn native` to run on iOS or Android
+- `yarn native` to run on iOS or Android(PS: for this to work, you'll need your web app running on 3000. Your nextjs app is also your backend!)
 - `yarn studio` to start up your prisma studio
 
 ### 4. Starting your project!

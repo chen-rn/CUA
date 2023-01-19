@@ -123,7 +123,7 @@ After you create a new project, and link it with your github repo, you'll have t
   - `DATABASE_URL`
   - `CLERK_API_KEY`
   - `CLERK_JWT_KEY`
-- ⚠️⚠️⚠️ NOTE: Clerk has changed their ENV names, so you'll need to change that accordingly here AND in turbo.json!!!! (you can ignore the JWT one)
+- ⚠️⚠️⚠️ NOTE: Clerk has changed their ENV names, so you'll need to change that accordingly here AND in turbo.json!!!! (you can ignore the JWT one) A new PR is coming soon!!
 
 Photo reference 👇👇
 

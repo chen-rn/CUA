@@ -94,6 +94,7 @@ After you've duplicated the repo and cloned it, we need to make sure your Yarn i
 - set up your environment variables properly by duplicating the `.env.example` file, removing `.example`, and entering your environment variables.
   - Clerk API: sign up clerk
   - DATABASE_URL: spin up a postgres instance with Railway or Supabase
+  - ⚠️⚠️⚠️ NOTE: Clerk has changed their ENV names, so you'll need to change that accordingly here AND in turbo.json!!!! (you can ignore the JWT one) A new PR is coming soon!!
 - you'll also need to manually enter your clerk frontend api into /packages/app/provider/auth/index.tsx (you can also global search `//ENTER YOUR ENV HERE`)
 - `yarn db-push` push our schema to our DB
 
@@ -102,6 +103,7 @@ After you've duplicated the repo and cloned it, we need to make sure your Yarn i
 - `yarn web` for web dev
 - `yarn native` to run on iOS or Android(PS: for this to work, you'll need your web app running on 3000. Your nextjs app is also your backend!)
 - `yarn studio` to start up your prisma studio
+PS: the tRPC query will show nothing unless you manually open up Prisma and add a "post", or query an user info in the db!
 
 ### 4. Starting your project!
 - Put your screens in `packages/app/features`
@@ -123,7 +125,7 @@ After you create a new project, and link it with your github repo, you'll have t
   - `DATABASE_URL`
   - `CLERK_API_KEY`
   - `CLERK_JWT_KEY`
-- ⚠️⚠️⚠️ NOTE: Clerk has changed their ENV names, so you'll need to change that accordingly here AND in turbo.json!!!! (you can ignore the JWT one) A new PR is coming soon!!
+
 
 Photo reference 👇👇
 

@@ -44,4 +44,5 @@ yarn-error.log*
 THUMBS_DB
 thumbs.db
 
+# intellij
 .idea

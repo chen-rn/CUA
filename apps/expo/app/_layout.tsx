@@ -2,7 +2,7 @@ import 'expo-dev-client'
 import React from 'react'
 import { Provider } from 'app/provider'
 import { useFonts } from 'expo-font'
-import { Stack } from 'expo-router'
+import {SplashScreen, Stack} from 'expo-router'
 
 
 export default function App() {
@@ -12,7 +12,7 @@ export default function App() {
     })
 
     if (!loaded) {
-        return null
+        return <SplashScreen />
     }
 
     return (

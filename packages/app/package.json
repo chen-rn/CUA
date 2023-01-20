@@ -21,6 +21,6 @@
     "@trpc/next": "10.9.0",
     "@trpc/react-query": "10.9.0",
     "expo-linking": "^3.2.3",
-    "solito": "2.0.0-canary.4"
+    "solito": "2.1.3"
   }
 }

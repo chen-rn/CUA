@@ -83,19 +83,18 @@ _Note: you don't need to understanding how everything works in detail before you
 ## 🔨 How to use this? Step by step tutorial.
 After you've duplicated the repo and cloned it, we need to make sure your Yarn is set up properly for monorepos.
 
-### 1. Set up yarn
-- `yarn set version stable` make sure we are on 3 
-- <s>`yarn plugin import workspace-tools` add in a workspace plugin(don't need anymore) </s>
-- `yarn config set nodeLinker node-modules` make sure we are not using the default plug n play 
+<s>### 1. Set up yarn(if you're coming from the Youtube video, you can skip these 3 steps and install directly now)</s>
+- <s>`yarn set version stable` make sure we are on 3 </s>
+- <s>`yarn plugin import workspace-tools` add in a workspace plugin </s>
+- <s>`yarn config set nodeLinker node-modules` make sure we are not using the default plug n play </s>
 
 ### 2. Set up project properly
 - `yarn` install packages and build the project
 - `yarn generate` generate your prisma client!
 - set up your environment variables properly by duplicating the `.env.example` file, removing `.example`, and entering your environment variables.
   - Clerk API: sign up clerk
-  - DATABASE_URL: spin up a postgres instance with Railway or Supabase
-  - ⚠️⚠️⚠️ NOTE: Clerk has changed their ENV names, so you'll need to change that accordingly here AND in turbo.json!!!! (you can ignore the JWT one) A new PR is coming soon!!
-- you'll also need to manually enter your clerk frontend api into /packages/app/provider/auth/index.tsx (you can also global search `//ENTER YOUR ENV HERE`)
+  - <s>DATABASE_URL: spin up a postgres instance with Railway or Supabase(we're using SQLlite by default now, so you don't have to do this unless you're ready to go prod!)</s> 
+- you'll also need to manually enter your clerk frontend api into /packages/app/provider/auth/index.tsx
 - `yarn db-push` push our schema to our DB
 
 
@@ -121,10 +120,9 @@ After you create a new project, and link it with your github repo, you'll have t
 - Override the default install command with `yarn set version stable && yarn install`(not shown in the photo, but do this as well)
 - Override the default build command with `cd ../.. && yarn run build --filter=nextjs...`
 - Enter your environment variables
-  - `NEXT_PUBLIC_CLERK_FRONTEND_API`
+  - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
   - `DATABASE_URL`
-  - `CLERK_API_KEY`
-  - `CLERK_JWT_KEY`
+  - `CLERK_SECRET_KEY`
 
 
 Photo reference 👇👇

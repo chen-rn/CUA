@@ -13,7 +13,7 @@ https://user-images.githubusercontent.com/36214945/211167187-347b87ce-1c03-4678-
 
 Live Demo: https://cua-demo.vercel.app/
 
-[👾👾Our Discord👾👾](https://discord.gg/5HvtckjyYb)
+If you have any question while using this, feel free to join our [👾👾Discord👾👾](https://discord.gg/5HvtckjyYb), we are all pretty active in there!
 
 `npx create-t3-universal-app` - you can also run this to start your project!([by albbus](https://github.com/albbus-stack/create-t3-universal-app))
 

@@ -81,14 +81,7 @@ _Note: you don't need to understanding how everything works in detail before you
 
 
 ## 🔨 How to use this? Step by step tutorial.
-After you've duplicated the repo and cloned it, we need to make sure your Yarn is set up properly for monorepos.
-
-<s>### 1. Set up yarn(if you're coming from the Youtube video, you can skip these 3 steps and install directly now)</s>
-- <s>`yarn set version stable` make sure we are on 3 </s>
-- <s>`yarn plugin import workspace-tools` add in a workspace plugin </s>
-- <s>`yarn config set nodeLinker node-modules` make sure we are not using the default plug n play </s>
-
-### 2. Set up project properly
+### 1. Set up project
 - `yarn` install packages and build the project
 - `yarn generate` generate your prisma client!
 - set up your environment variables properly by duplicating the `.env.example` file, removing `.example`, and entering your environment variables.
@@ -98,13 +91,13 @@ After you've duplicated the repo and cloned it, we need to make sure your Yarn i
 - `yarn db-push` push our schema to our DB
 
 
-### 3. Start up your project!
+### 2. Start up your project!
 - `yarn web` for web dev
 - `yarn native` to run on iOS or Android(PS: for this to work, you'll need your web app running on 3000. Your nextjs app is also your backend!)
 - `yarn studio` to start up your prisma studio
 PS: the tRPC query will show nothing unless you manually open up Prisma and add a "post", or query an user info in the db!
 
-### 4. Starting your project!
+### 3. Adding a new screen!
 - Put your screens in `packages/app/features`
 - For smaller components, feel free to put them in `/packages/ui`
 - For new routes, add them in `/packages/api/src/router`, and make sure you merge them in `index.ts`

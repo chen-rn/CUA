@@ -110,8 +110,8 @@ PS: the tRPC query will show nothing unless you manually open up Prisma and add 
 
 ## Deploying the web app to Vercel
 After you create a new project, and link it with your github repo, you'll have to
-- <s> Override the default install command with `yarn set version stable && yarn install`(not shown in the photo, but do this as well) no need, added vercle config file</s>
-- <s> Override the default build command with `cd ../.. && yarn run build --filter=nextjs...` no need, added vercle config file</s>
+- <s> Override the default install command with `yarn set version stable && yarn install`(not shown in the photo, but do this as well) no need, added Vercel config file</s>
+- <s> Override the default build command with `cd ../.. && yarn run build --filter=nextjs...` no need, added Vercel config file</s>
 - Enter your environment variables
   - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
   - `DATABASE_URL`

@@ -83,7 +83,6 @@ _Note: you don't need to understanding how everything works in detail before you
 ## 🔨 How to use this? Step by step tutorial.
 ### 1. Set up project
 - `yarn` install packages and build the project
-- `yarn generate` generate your prisma client!
 - set up your environment variables properly by duplicating the `.env.example` file, removing `.example`, and entering your environment variables.
   - Clerk API: sign up clerk
   - <s>DATABASE_URL: spin up a postgres instance with Railway or Supabase(we're using SQLlite by default now, so you don't have to do this unless you're ready to go prod!)</s> 

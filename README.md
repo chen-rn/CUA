@@ -13,7 +13,7 @@ https://user-images.githubusercontent.com/36214945/211167187-347b87ce-1c03-4678-
 
 Live Demo: https://cua-demo.vercel.app/
 
-[👾👾Our Discord👾👾](https://discord.gg/5HvtckjyYb)
+If you have any question while using this, feel free to join our [👾👾Discord👾👾](https://discord.gg/5HvtckjyYb), we are all pretty active in there!
 
 `npx create-t3-universal-app` - you can also run this to start your project!([by albbus](https://github.com/albbus-stack/create-t3-universal-app))
 
@@ -81,16 +81,8 @@ _Note: you don't need to understanding how everything works in detail before you
 
 
 ## 🔨 How to use this? Step by step tutorial.
-After you've duplicated the repo and cloned it, we need to make sure your Yarn is set up properly for monorepos.
-
-<s>### 1. Set up yarn(if you're coming from the Youtube video, you can skip these 3 steps and install directly now)</s>
-- <s>`yarn set version stable` make sure we are on 3 </s>
-- <s>`yarn plugin import workspace-tools` add in a workspace plugin </s>
-- <s>`yarn config set nodeLinker node-modules` make sure we are not using the default plug n play </s>
-
-### 2. Set up project properly
+### 1. Set up project
 - `yarn` install packages and build the project
-- `yarn generate` generate your prisma client!
 - set up your environment variables properly by duplicating the `.env.example` file, removing `.example`, and entering your environment variables.
   - Clerk API: sign up clerk
   - <s>DATABASE_URL: spin up a postgres instance with Railway or Supabase(we're using SQLlite by default now, so you don't have to do this unless you're ready to go prod!)</s> 
@@ -98,13 +90,13 @@ After you've duplicated the repo and cloned it, we need to make sure your Yarn i
 - `yarn db-push` push our schema to our DB
 
 
-### 3. Start up your project!
+### 2. Start up your project!
 - `yarn web` for web dev
 - `yarn native` to run on iOS or Android(PS: for this to work, you'll need your web app running on 3000. Your nextjs app is also your backend!)
 - `yarn studio` to start up your prisma studio
 PS: the tRPC query will show nothing unless you manually open up Prisma and add a "post", or query an user info in the db!
 
-### 4. Starting your project!
+### 3. Adding a new screen!
 - Put your screens in `packages/app/features`
 - For smaller components, feel free to put them in `/packages/ui`
 - For new routes, add them in `/packages/api/src/router`, and make sure you merge them in `index.ts`
@@ -117,8 +109,8 @@ PS: the tRPC query will show nothing unless you manually open up Prisma and add 
 
 ## Deploying the web app to Vercel
 After you create a new project, and link it with your github repo, you'll have to
-- Override the default install command with `yarn set version stable && yarn install`(not shown in the photo, but do this as well)
-- Override the default build command with `cd ../.. && yarn run build --filter=nextjs...`
+- <s> Override the default install command with `yarn set version stable && yarn install`(not shown in the photo, but do this as well) no need, added Vercel config file</s>
+- <s> Override the default build command with `cd ../.. && yarn run build --filter=nextjs...` no need, added Vercel config file</s>
 - Enter your environment variables
   - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
   - `DATABASE_URL`
@@ -128,3 +120,4 @@ After you create a new project, and link it with your github repo, you'll have t
 Photo reference 👇👇
 
 <img width="704" alt="Screenshot 2023-01-14 at 12 06 17 AM" src="https://user-images.githubusercontent.com/36214945/212462681-f6cc448b-d24b-4541-a350-290a6985ad85.png">
+(ignore the install command one now)

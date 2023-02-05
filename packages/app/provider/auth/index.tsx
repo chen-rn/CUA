@@ -7,7 +7,7 @@ const CLERK_PUBLISHABLE_KEY = "pk_test_ablablablablabla"; //enter your clerk key
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   return (
     <ClerkProvider
-      publishableKey={CLERK_PUBLISHABLE_KEY}
+      frontendApi={CLERK_PUBLISHABLE_KEY}
       tokenCache={tokenCache}
     >
       {children}

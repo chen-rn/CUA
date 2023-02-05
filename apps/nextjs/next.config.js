@@ -74,6 +74,11 @@ module.exports = function () {
       'expo-linking',
       'expo-constants',
       'expo-modules-core',
+        /*
+        leave these here, and enable if installing dependancies causes issues
+        '@my/api',
+        '@my/db',
+         */
     ],
     experimental: {
       // optimizeCss: true,

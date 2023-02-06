@@ -1,11 +1,7 @@
 {
   "name": "myapp-monorepo",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "packageManager": "yarn@3.3.1",
+  "packageManager": "pnpm@7.15.0",
   "prisma": {
     "schema": "./packages/db/prisma/schema.prisma"
   },
@@ -16,9 +12,9 @@
     "clean": "rm -rf node_modules",
     "clean:workspaces": "turbo clean",
     "db-push": "turbo db-push",
-    "postinstall": "yarn build:ui && yarn generate",
-    "generate": "cd packages/db && yarn prisma generate",
-    "build:ui": "cd packages/ui && yarn build",
+    "postinstall": "pnpm build:ui && pnpm generate",
+    "generate": "cd packages/db && pnpm prisma generate",
+    "build:ui": "cd packages/ui && pnpm build",
     "studio": " cd packages/db && yarn prisma:studio",
     "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader"
   },

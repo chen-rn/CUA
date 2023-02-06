@@ -7,9 +7,9 @@
     "start": "expo start -c",
     "dev": "expo start --c",
     "clean": "rm -rf .expo .turbo node_modules",
-    "android": "TAMAGUI_TARGET=native yarn expo run:android",
-    "ios": "TAMAGUI_TARGET=native yarn expo run:ios",
-    "web": "TAMAGUI_TARGET=web yarn expo start --web",
+    "android": "TAMAGUI_TARGET=native pnpm expo run:android",
+    "ios": "TAMAGUI_TARGET=native pnpm expo run:ios",
+    "web": "TAMAGUI_TARGET=web pnpm expo start --web",
     "eject": "expo eject"
   },
   "dependencies": {

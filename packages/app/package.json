@@ -15,6 +15,7 @@
     "@tamagui/shorthands": "~1.2.8",
     "@tamagui/theme-base": "~1.2.8",
     "@my/ui": "workspace:*",
+    "@my/api": "workspace:*",
     "@tanstack/react-query": "4.22.0",
     "@trpc/next": "10.9.0",
     "@trpc/react-query": "10.9.0",

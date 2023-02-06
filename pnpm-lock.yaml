@@ -105,6 +105,7 @@ importers:
 
   apps/nextjs:
     specifiers:
+      '@my/api': workspace:*
       '@tamagui/next-plugin': 1.2.7
       '@tamagui/next-theme': 1.2.7
       '@types/node': ^18.6.4
@@ -120,6 +121,7 @@ importers:
       react-native-web: 0.18.9
       react-native-web-lite: ^1.0.1-beta.144
     dependencies:
+      '@my/api': link:../../packages/api
       '@tamagui/next-theme': 1.2.7_react@18.2.0
       app: link:../../packages/app
       next: 13.1.6_biqbaboplfbrettd7655fr4n2y
@@ -160,6 +162,7 @@ importers:
   packages/app:
     specifiers:
       '@clerk/nextjs': ^4.6.15
+      '@my/api': workspace:*
       '@my/ui': workspace:*
       '@tamagui/animations-react-native': ~1.2.8
       '@tamagui/colors': ~1.2.8
@@ -174,6 +177,7 @@ importers:
       solito: 2.1.3
     dependencies:
       '@clerk/nextjs': 4.8.2
+      '@my/api': link:../api
       '@my/ui': link:../ui
       '@tamagui/animations-react-native': 1.2.8
       '@tamagui/colors': 1.2.8

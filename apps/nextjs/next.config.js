@@ -1,19 +1,20 @@
 /** @type {import('next').NextConfig} */
-const { withTamagui } = require('@tamagui/next-plugin')
-const withImages = require('next-images')
-const { join } = require('path')
+const { withTamagui } = require("@tamagui/next-plugin");
+const withImages = require("next-images");
+const { join } = require("path");
 
-process.env.IGNORE_TS_CONFIG_PATHS = 'true'
-process.env.TAMAGUI_TARGET = 'web'
-process.env.TAMAGUI_DISABLE_WARN_DYNAMIC_LOAD = '1'
+process.env.IGNORE_TS_CONFIG_PATHS = "true";
+process.env.TAMAGUI_TARGET = "web";
+process.env.TAMAGUI_DISABLE_WARN_DYNAMIC_LOAD = "1";
 
 const boolVals = {
   true: true,
   false: false,
-}
+};
 
 const disableExtraction =
-  boolVals[process.env.DISABLE_EXTRACTION] ?? process.env.NODE_ENV === 'development'
+  boolVals[process.env.DISABLE_EXTRACTION] ??
+  process.env.NODE_ENV === "development";
 
 /* console.log(`
 
@@ -21,7 +22,7 @@ Welcome to Tamagui!
 
 You can update this monorepo to the latest Tamagui release just by running:
 
-yarn upgrade:tamagui
+pnpm upgrade:tamagui
 
 We've set up a few things for you.
 
@@ -43,21 +44,27 @@ Remove this log in next.config.js.
 const plugins = [
   withImages,
   withTamagui({
-    config: './tamagui.config.ts',
-    components: ['tamagui', '@my/ui'],
-    importsWhitelist: ['constants.js', 'colors.js'],
+    config: "./tamagui.config.ts",
+    components: ["tamagui", "@my/ui"],
+    importsWhitelist: ["constants.js", "colors.js"],
     logTimings: true,
     disableExtraction,
     // experiment - reduced bundle size react-native-web
     useReactNativeWebLite: false,
     shouldExtract: (path) => {
-      if (path.includes(join('packages', 'app'))) {
-        return true
+      if (path.includes(join("packages", "app"))) {
+        return true;
       }
     },
-    excludeReactNativeWebExports: ['Switch', 'ProgressBar', 'Picker', 'CheckBox', 'Touchable'],
+    excludeReactNativeWebExports: [
+      "Switch",
+      "ProgressBar",
+      "Picker",
+      "CheckBox",
+      "Touchable",
+    ],
   }),
-]
+];
 
 module.exports = function () {
   /** @type {import('next').NextConfig} */
@@ -69,12 +76,13 @@ module.exports = function () {
       disableStaticImages: true,
     },
     transpilePackages: [
-      'solito',
-      'react-native-web',
-      'expo-linking',
-      'expo-constants',
-      'expo-modules-core',
-        /*
+      "solito",
+      "react-native-web",
+      "expo-linking",
+      "expo-constants",
+      "expo-modules-core",
+      "@my/api",
+      /*
         leave these here, and enable if installing dependancies causes issues
         '@my/api',
         '@my/db',
@@ -85,14 +93,14 @@ module.exports = function () {
       scrollRestoration: true,
       legacyBrowsers: false,
     },
-  }
+  };
 
   for (const plugin of plugins) {
     config = {
       ...config,
       ...plugin(config),
-    }
+    };
   }
 
-  return config
-}
+  return config;
+};

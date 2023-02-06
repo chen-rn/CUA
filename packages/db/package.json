@@ -1,21 +1,20 @@
 {
   "name": "@my/db",
-  "packageManager": "yarn@3.2.3",
   "version": "0.1.0",
   "main": "./index.ts",
   "types": "./index.ts",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "prisma:generate": "yarn with-env prisma generate",
-    "prisma:studio": "yarn with-env prisma studio",
-    "prisma:migrate": "yarn with-env prisma migrate",
-    "prisma:migrate:dev": "yarn with-env prisma migrate dev",
+    "prisma:generate": "pnpm with-env prisma generate",
+    "prisma:studio": "pnpm with-env prisma studio",
+    "prisma:migrate": "pnpm with-env prisma migrate",
+    "prisma:migrate:dev": "pnpm with-env prisma migrate dev",
     "clean": "rm -rf .turbo node_modules",
     "with-env": "dotenv -e ../../.env --",
-    "dev": "yarn with-env prisma studio --port 5556",
-    "db-push": "yarn with-env prisma db push",
-    "db-generate": "yarn with-env prisma generate"
+    "dev": "pnpm with-env prisma studio --port 5556",
+    "db-push": "pnpm with-env prisma db push",
+    "db-generate": "pnpm with-env prisma generate"
   },
   "dependencies": {
     "@prisma/client": "latest"

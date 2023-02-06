@@ -6,8 +6,9 @@
     "schema": "./packages/db/prisma/schema.prisma"
   },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "web": "turbo run dev --filter nextjs",
-    "native": "cd apps/expo && yarn start",
+    "native": "cd apps/expo && pnpm start",
     "build": "turbo build",
     "clean": "rm -rf node_modules",
     "clean:workspaces": "turbo clean",
@@ -15,7 +16,7 @@
     "postinstall": "pnpm build:ui && pnpm generate",
     "generate": "cd packages/db && pnpm prisma generate",
     "build:ui": "cd packages/ui && pnpm build",
-    "studio": " cd packages/db && yarn prisma:studio",
+    "studio": " cd packages/db && pnpm prisma:studio",
     "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader"
   },
   "resolutions": {

@@ -121,3 +121,11 @@ Photo reference 👇👇
 
 <img width="704" alt="Screenshot 2023-01-14 at 12 06 17 AM" src="https://user-images.githubusercontent.com/36214945/212462681-f6cc448b-d24b-4541-a350-290a6985ad85.png">
 (ignore the install command one now)
+
+
+FAQ:
+1. Where should I install the packages?
+If it contain native code, you must install it into the /Expo folder
+
+2. How do I know if it contains native code?
+This one is a bit fuzzy. Generally if it involves some interaction with the phone "system", ie. storage, camera, gyro, notification, and etc. It involves native code!

@@ -4343,6 +4343,107 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tauri-apps/cli-darwin-arm64@npm:1.2.3":
+  version: 1.2.3
+  resolution: "@tauri-apps/cli-darwin-arm64@npm:1.2.3"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@tauri-apps/cli-darwin-x64@npm:1.2.3":
+  version: 1.2.3
+  resolution: "@tauri-apps/cli-darwin-x64@npm:1.2.3"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@tauri-apps/cli-linux-arm-gnueabihf@npm:1.2.3":
+  version: 1.2.3
+  resolution: "@tauri-apps/cli-linux-arm-gnueabihf@npm:1.2.3"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@tauri-apps/cli-linux-arm64-gnu@npm:1.2.3":
+  version: 1.2.3
+  resolution: "@tauri-apps/cli-linux-arm64-gnu@npm:1.2.3"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@tauri-apps/cli-linux-arm64-musl@npm:1.2.3":
+  version: 1.2.3
+  resolution: "@tauri-apps/cli-linux-arm64-musl@npm:1.2.3"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@tauri-apps/cli-linux-x64-gnu@npm:1.2.3":
+  version: 1.2.3
+  resolution: "@tauri-apps/cli-linux-x64-gnu@npm:1.2.3"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@tauri-apps/cli-linux-x64-musl@npm:1.2.3":
+  version: 1.2.3
+  resolution: "@tauri-apps/cli-linux-x64-musl@npm:1.2.3"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@tauri-apps/cli-win32-ia32-msvc@npm:1.2.3":
+  version: 1.2.3
+  resolution: "@tauri-apps/cli-win32-ia32-msvc@npm:1.2.3"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@tauri-apps/cli-win32-x64-msvc@npm:1.2.3":
+  version: 1.2.3
+  resolution: "@tauri-apps/cli-win32-x64-msvc@npm:1.2.3"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@tauri-apps/cli@npm:^1.2.3":
+  version: 1.2.3
+  resolution: "@tauri-apps/cli@npm:1.2.3"
+  dependencies:
+    "@tauri-apps/cli-darwin-arm64": 1.2.3
+    "@tauri-apps/cli-darwin-x64": 1.2.3
+    "@tauri-apps/cli-linux-arm-gnueabihf": 1.2.3
+    "@tauri-apps/cli-linux-arm64-gnu": 1.2.3
+    "@tauri-apps/cli-linux-arm64-musl": 1.2.3
+    "@tauri-apps/cli-linux-x64-gnu": 1.2.3
+    "@tauri-apps/cli-linux-x64-musl": 1.2.3
+    "@tauri-apps/cli-win32-ia32-msvc": 1.2.3
+    "@tauri-apps/cli-win32-x64-msvc": 1.2.3
+  dependenciesMeta:
+    "@tauri-apps/cli-darwin-arm64":
+      optional: true
+    "@tauri-apps/cli-darwin-x64":
+      optional: true
+    "@tauri-apps/cli-linux-arm-gnueabihf":
+      optional: true
+    "@tauri-apps/cli-linux-arm64-gnu":
+      optional: true
+    "@tauri-apps/cli-linux-arm64-musl":
+      optional: true
+    "@tauri-apps/cli-linux-x64-gnu":
+      optional: true
+    "@tauri-apps/cli-linux-x64-musl":
+      optional: true
+    "@tauri-apps/cli-win32-ia32-msvc":
+      optional: true
+    "@tauri-apps/cli-win32-x64-msvc":
+      optional: true
+  bin:
+    tauri: tauri.js
+  checksum: 1df8404183b04e0bef637f9aff429a21ee1ad594c0c72feb94ca0b66b404628f93ccad7a1dee3894ca7b4d566721c676d0187f184333af3d562dad31f27de72e
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:2":
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
@@ -7025,6 +7126,27 @@ __metadata:
   bin:
     dotenv: cli.js
   checksum: 3db5a363eedd24d428001a956d9b8c72094983bfe0e0e722cda7803b614daf85dde9c9beb5d9fa28a139a5c594533ecd8f9d8430a90c244175e81c9a40abc5b1
+  languageName: node
+  linkType: hard
+
+"dotenv-cli@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "dotenv-cli@npm:7.0.0"
+  dependencies:
+    cross-spawn: ^7.0.3
+    dotenv: ^16.0.0
+    dotenv-expand: ^10.0.0
+    minimist: ^1.2.6
+  bin:
+    dotenv: cli.js
+  checksum: de4ed19bc08cef509e6bee8bf26df0523e502556abbc732a86f8eee50fc3b3b0b3824803100e39f2d09ef1335b558b9e10d1ba51a4a2338c0ebbae6b5c520b19
+  languageName: node
+  linkType: hard
+
+"dotenv-expand@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "dotenv-expand@npm:10.0.0"
+  checksum: 2a38b470efe0abcb1ac8490421a55e1d764dc9440fd220942bce40965074f3fb00b585f4346020cb0f0f219966ee6b4ee5023458b3e2953fe5b3214de1b314ee
   languageName: node
   linkType: hard
 
@@ -11778,9 +11900,11 @@ __metadata:
   dependencies:
     "@tamagui/next-plugin": 1.0.17
     "@tamagui/next-theme": 1.0.17
+    "@tauri-apps/cli": ^1.2.3
     "@types/node": ^18.6.4
     app: "*"
     critters: ^0.0.16
+    dotenv-cli: ^7.0.0
     eslint-config-next: ^13.0.4
     next: ^13.0.6
     next-images: ^1.8.4

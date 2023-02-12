@@ -10,7 +10,8 @@
     "start": "next start",
     "serve": "NODE_ENV=production next start --port 8151",
     "lint": "next lint",
-    "export": "next export"
+    "export": "next export",
+    "dev:tauri": "yarn tauri dev"
   },
   "dependencies": {
     "@tamagui/next-theme": "1.0.17",

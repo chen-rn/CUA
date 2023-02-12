@@ -19,7 +19,6 @@
     },
     "studio": {
       "inputs": ["prisma/schema.prisma"],
-
       "cache": false
     },
     "build": {

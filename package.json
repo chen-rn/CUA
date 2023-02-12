@@ -11,8 +11,8 @@
   },
   "scripts": {
     "web": "turbo run dev --filter nextjs",
-    "native": "cd apps/expo && yarn start",
-    "desktop": "cd apps/nextjs && yarn tauri dev",
+    "native": "cd apps/expo && yarn dev",
+    "desktop": "turbo run dev:tauri --filter nextjs",
     "build": "turbo build",
     "clean": "rm -rf node_modules",
     "clean:workspaces": "turbo clean",

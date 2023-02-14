@@ -20,6 +20,7 @@
     "postinstall": "yarn build:ui && yarn generate",
     "generate": "cd packages/db && yarn prisma generate",
     "build:ui": "cd packages/ui && yarn build",
+    "build-desktop": "turbo run build:tauri --filter nextjs",
     "studio": " cd packages/db && yarn prisma:studio",
     "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader"
   },

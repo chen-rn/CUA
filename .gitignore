@@ -13,6 +13,7 @@
 
 # next.js
 **/.next/*
+**/nextjs/out/
 /out/
 
 # tamagui
@@ -48,3 +49,8 @@ thumbs.db
 .idea
 .gradle
 
+# turbo
+**/.turbo/*
+
+# sqlite
+**/*.sqlite

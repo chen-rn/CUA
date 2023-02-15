@@ -41,13 +41,14 @@ export const SignUpSignInComponent: React.FC<Props> = ({
         {type === "sign-up" ? "Create your account" : "Log in to your account"}
       </Paragraph>
       {/* all the oauth sign up options */}
-      <XStack space jc={"space-evenly"}>
+      <XStack space jc={"space-evenly"} theme="light">
         {/* 3 buttons, for google, apple, discord */}
         <Button
           size="$5"
-          bg="$backgroundTransparent"
-          borderColor={"$gray6Light"}
           onPress={() => handleOAuthWithPress("oauth_google")}
+          hoverStyle={{ opacity: 0.8 }}
+          focusStyle={{ scale: 0.95 }}
+          borderColor="$gray8Light"
         >
           <Image
             src="https://qwvsfvhphdefqfyuuhlb.supabase.co/storage/v1/object/public/logos/Google%20logo.png"
@@ -57,9 +58,10 @@ export const SignUpSignInComponent: React.FC<Props> = ({
         </Button>
         <Button
           size="$5"
-          bg="$backgroundTransparent"
-          borderColor={"$gray6Light"}
           onPress={() => handleOAuthWithPress("oauth_apple")}
+          hoverStyle={{ opacity: 0.8 }}
+          focusStyle={{ scale: 0.95 }}
+          borderColor="$gray8Light"
         >
           <Image
             src="https://qwvsfvhphdefqfyuuhlb.supabase.co/storage/v1/object/public/logos/Apple%20logo.png"
@@ -70,9 +72,10 @@ export const SignUpSignInComponent: React.FC<Props> = ({
         </Button>
         <Button
           size="$5"
-          bg="$backgroundTransparent"
-          borderColor={"$gray6Light"}
           onPress={() => handleOAuthWithPress("oauth_discord")}
+          hoverStyle={{ opacity: 0.8 }}
+          focusStyle={{ scale: 0.95 }}
+          borderColor="$gray8Light"
         >
           <Image
             src="https://qwvsfvhphdefqfyuuhlb.supabase.co/storage/v1/object/public/logos/Discord%20logo.png"
@@ -115,6 +118,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({
         hoverStyle={{ opacity: 0.8 }}
         onHoverIn={() => {}}
         onHoverOut={() => {}}
+        focusStyle={{ scale: 0.975 }}
       >
         {type === "sign-up" ? "Sign up" : "Sign in"}
       </Button>

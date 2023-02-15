@@ -136,6 +136,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({
             size="$2"
             fontWeight={"700"}
             opacity={0.5}
+            hoverStyle={{ opacity: 0.4 }}
           >
             {type === "sign-up" ? "Sign in" : "Sign up"}
           </Paragraph>

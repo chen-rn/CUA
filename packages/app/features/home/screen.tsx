@@ -56,7 +56,7 @@ export function HomeScreen() {
       {session ? (
         <Button
           onPress={() => {
-            push("/signin");
+            supabase.auth.signOut();
           }}
         >
           Sign Out

@@ -1,3 +1,11 @@
+## Note
+
+Everything here should be the same as main branch, with the only difference being the Auth provider being Supabase instead of Clerk.
+Which means that you'll need to make a Supabase account and enter your supabaseUrl and supabaseAnonKey into supabase.ts util helper.
+
+Additionally, to get OAuth working, you'll need to enable the OAuth providers in Supabase and then set up the correct re-direct URL.
+exp://YOUR-IP:19000/--/sso-oauth
+
 # 🌌 create-universal-app (CUA)
 
 <https://user-images.githubusercontent.com/36214945/211167187-347b87ce-1c03-4678-9904-542aa78ab131.mp4>

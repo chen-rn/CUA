@@ -1,9 +1,23 @@
 import { Anchor, Button, H1, H3, Paragraph, Separator, XStack, YStack } from "@my/ui";
 import { useRouter } from "solito/router";
+import { useState, useEffect } from "react";
 import { trpc } from "app/utils/trpc";
+import { supabase } from "app/utils/supabase";
+import { Session } from "@supabase/supabase-js";
 
 export function HomeScreen() {
   const { push } = useRouter();
+  const [session, setSession] = useState<Session | null>(null);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+    });
+
+    supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+    });
+  }, []);
   return (
     <YStack f={1} jc="center" ai="center" p="$4" space backgroundColor={"$background"}>
       <YStack space="$4" maw={600} px={"$3"}>
@@ -39,20 +53,32 @@ export function HomeScreen() {
         User Page(Routing)
       </Button>
 
-      <Button
-        onPress={() => {
-          push("/signup");
-        }}
-      >
-        Sign Up
-      </Button>
-      <Button
-        onPress={() => {
-          push("/signin");
-        }}
-      >
-        Sign In
-      </Button>
+      {session ? (
+        <Button
+          onPress={() => {
+            push("/signin");
+          }}
+        >
+          Sign Out
+        </Button>
+      ) : (
+        <XStack space>
+          <Button
+            onPress={() => {
+              push("/signup");
+            }}
+          >
+            Sign Up
+          </Button>
+          <Button
+            onPress={() => {
+              push("/signin");
+            }}
+          >
+            Sign In
+          </Button>
+        </XStack>
+      )}
     </YStack>
   );
 }

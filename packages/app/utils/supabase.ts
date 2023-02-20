@@ -1,6 +1,6 @@
-import "react-native-url-polyfill/auto";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { createClient } from "@supabase/supabase-js";
+import "./polyfill"; //note, this is a fix for supabase
 
 /* WARNING: your supabase public creds! */
 export const supabaseUrl = "https://glhgxeyapcicvdvlajkq.supabase.co";

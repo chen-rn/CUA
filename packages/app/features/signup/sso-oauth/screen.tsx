@@ -1,18 +1,18 @@
 import { useEffect } from "react";
-import { useSignUp, useUser } from "app/utils/clerk";
+// import { useSignUp, useUser } from "app/utils/clerk";
 import { handleOAuthSignUp } from "app/utils/auth";
 import { createParam } from "solito";
-import { OAuthStrategy } from "@clerk/types";
+//import { OAuthStrategy } from "@clerk/types";
 import { useRouter } from "solito/router";
 import { trpc } from "app/utils/trpc";
 
-const { useParam } = createParam<{ strategy: OAuthStrategy }>();
+const { useParam } = createParam<{ strategy: any }>();
 
 export function SSOOAuthScreen() {
   const { push } = useRouter();
-  const { isLoaded, signUp, setSession } = useSignUp();
+  // const { isLoaded, signUp, setSession } = useSignUp();
   const [strategy] = useParam("strategy");
-  const { user, isSignedIn } = useUser();
+  // const { user, isSignedIn } = useUser();
 
   const createUserMutation = trpc.user.create.useMutation();
   const currentUser = trpc.user.current.useQuery();
@@ -24,7 +24,7 @@ export function SSOOAuthScreen() {
     });
   };
 
-  useEffect(() => {
+  /*  useEffect(() => {
     if (!strategy || !setSession) return;
     if (isSignedIn && user && currentUser) {
       //in this case, we are assuming that if the user is signedin
@@ -36,6 +36,6 @@ export function SSOOAuthScreen() {
     } else {
       handleOAuthSignUp(strategy, setSession, signUp);
     }
-  }, [isLoaded, signUp, setSession]);
+  }, [isLoaded, signUp, setSession]); */
   return <></>;
 }

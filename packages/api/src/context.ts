@@ -3,7 +3,6 @@ import { type inferAsyncReturnType } from "@trpc/server";
 import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
 //import { getAuth, clerkClient } from "@clerk/nextjs/server";
 
-import { createClient } from "@supabase/supabase-js";
 import type { User } from "@supabase/supabase-js";
 
 // Create a single supabase client for interacting with your user/db

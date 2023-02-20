@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { YStack, Paragraph, XStack, Button, Input, Image, Stack } from "tamagui";
 import { Link } from "solito/link";
+import type { Provider } from "@supabase/supabase-js";
 
 interface Props {
   type: "sign-up" | "sign-in";
@@ -11,7 +12,6 @@ interface Props {
 export const SignUpSignInComponent: React.FC<Props> = ({ type, handleOAuthWithPress, handleEmailWithPress }) => {
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
   return (
     <YStack
       borderRadius="$10"
@@ -32,7 +32,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({ type, handleOAuthWithPr
         {/* 3 buttons, for google, apple, discord */}
         <Button
           size="$5"
-          onPress={() => handleOAuthWithPress("oauth_google")}
+          onPress={() => handleOAuthWithPress("google")}
           hoverStyle={{ opacity: 0.8 }}
           focusStyle={{ scale: 0.95 }}
           borderColor="$gray8"
@@ -45,7 +45,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({ type, handleOAuthWithPr
         </Button>
         <Button
           size="$5"
-          onPress={() => handleOAuthWithPress("oauth_apple")}
+          onPress={() => handleOAuthWithPress("apple")}
           hoverStyle={{ opacity: 0.8 }}
           focusStyle={{ scale: 0.95 }}
           borderColor="$gray8"
@@ -59,7 +59,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({ type, handleOAuthWithPr
         </Button>
         <Button
           size="$5"
-          onPress={() => handleOAuthWithPress("oauth_discord")}
+          onPress={() => handleOAuthWithPress("discord")}
           hoverStyle={{ opacity: 0.8 }}
           focusStyle={{ scale: 0.95 }}
           borderColor="$gray8"

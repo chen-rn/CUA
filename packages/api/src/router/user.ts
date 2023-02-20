@@ -7,7 +7,7 @@ export const userRouter = router({
   current: protectedProcedure.query(({ ctx }) => {
     return ctx.prisma.user.findFirst({ where: { id: ctx.user.id } });
   }),
-  create: protectedProcedure
+  create: publicProcedure
     .input(
       z.object({
         email: z.string(),

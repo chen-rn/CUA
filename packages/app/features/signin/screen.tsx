@@ -1,6 +1,4 @@
 import { YStack } from "@my/ui";
-import { useSignIn } from "app/utils/clerk";
-import { OAuthStrategy } from "@clerk/types";
 import { useRouter } from "solito/router";
 import { SignUpSignInComponent } from "@my/ui/src/components/SignUpSignIn";
 import { handleOAuthSignIn } from "app/utils/auth";
@@ -15,28 +13,9 @@ const getBaseUrl = () => {
 export function SignInScreen() {
   const { push } = useRouter();
 
-  const { isLoaded, signIn, setSession } = useSignIn();
-  if (!setSession) return null;
-  if (!isLoaded) return null;
+  const handleOAuthSignInWithPress = async (strategy: any) => {};
 
-  const redirectIfSignedIn = async () => {
-    if (signIn.status == "complete") {
-      push("/");
-    }
-  };
-
-  const handleOAuthSignInWithPress = async (strategy: OAuthStrategy) => {
-    await handleOAuthSignIn(strategy, setSession, signIn);
-    await redirectIfSignedIn();
-  };
-
-  const handleEmailSignInWithPress = async (emailAddress, password) => {
-    await signIn.create({
-      identifier: emailAddress,
-      password,
-    });
-    await redirectIfSignedIn();
-  };
+  const handleEmailSignInWithPress = async (emailAddress, password) => {};
 
   return (
     <YStack f={1} jc="center" ai="center" space>

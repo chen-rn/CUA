@@ -1,30 +1,17 @@
 import { useState } from "react";
-import {
-  YStack,
-  Paragraph,
-  XStack,
-  Button,
-  Input,
-  Image,
-  Stack,
-} from "tamagui";
+import { YStack, Paragraph, XStack, Button, Input, Image, Stack } from "tamagui";
 import { Link } from "solito/link";
-import { OAuthStrategy } from "@clerk/types";
 
 interface Props {
   type: "sign-up" | "sign-in";
-  handleOAuthWithPress: (strategy: OAuthStrategy) => void;
+  handleOAuthWithPress: (strategy: any) => void;
   handleEmailWithPress: (emailAddress, password) => void;
 }
 
-export const SignUpSignInComponent: React.FC<Props> = ({
-  type,
-  handleOAuthWithPress,
-  handleEmailWithPress,
-}) => {
+export const SignUpSignInComponent: React.FC<Props> = ({ type, handleOAuthWithPress, handleEmailWithPress }) => {
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
-
+  const [phoneNumber, setPhoneNumber] = useState("");
   return (
     <YStack
       borderRadius="$10"
@@ -48,7 +35,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({
           onPress={() => handleOAuthWithPress("oauth_google")}
           hoverStyle={{ opacity: 0.8 }}
           focusStyle={{ scale: 0.95 }}
-          borderColor="$gray8Light"
+          borderColor="$gray8"
         >
           <Image
             src="https://qwvsfvhphdefqfyuuhlb.supabase.co/storage/v1/object/public/logos/Google%20logo.png"
@@ -61,7 +48,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({
           onPress={() => handleOAuthWithPress("oauth_apple")}
           hoverStyle={{ opacity: 0.8 }}
           focusStyle={{ scale: 0.95 }}
-          borderColor="$gray8Light"
+          borderColor="$gray8"
         >
           <Image
             src="https://qwvsfvhphdefqfyuuhlb.supabase.co/storage/v1/object/public/logos/Apple%20logo.png"
@@ -75,7 +62,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({
           onPress={() => handleOAuthWithPress("oauth_discord")}
           hoverStyle={{ opacity: 0.8 }}
           focusStyle={{ scale: 0.95 }}
-          borderColor="$gray8Light"
+          borderColor="$gray8"
         >
           <Image
             src="https://qwvsfvhphdefqfyuuhlb.supabase.co/storage/v1/object/public/logos/Discord%20logo.png"
@@ -109,6 +96,13 @@ export const SignUpSignInComponent: React.FC<Props> = ({
         secureTextEntry
       />
 
+      {/* phone sign up option */}
+      {/*    <Input
+        placeholder="Phone Number"
+        onChangeText={(text) => {
+          setPhoneNumber(text);
+        }}
+      /> */}
       {/* sign up button */}
       <Button
         themeInverse
@@ -126,18 +120,10 @@ export const SignUpSignInComponent: React.FC<Props> = ({
       {/* or sign in, in small and less opaque font */}
       <XStack>
         <Paragraph size="$2" mr="$2" opacity={0.4}>
-          {type === "sign-up"
-            ? "Already have an account?"
-            : "Don’t have an account?"}
+          {type === "sign-up" ? "Already have an account?" : "Don’t have an account?"}
         </Paragraph>
         <Link href={type === "sign-up" ? "/signin" : "/signup"}>
-          <Paragraph
-            cursor={"pointer"}
-            size="$2"
-            fontWeight={"700"}
-            opacity={0.5}
-            hoverStyle={{ opacity: 0.4 }}
-          >
+          <Paragraph cursor={"pointer"} size="$2" fontWeight={"700"} opacity={0.5} hoverStyle={{ opacity: 0.4 }}>
             {type === "sign-up" ? "Sign in" : "Sign up"}
           </Paragraph>
         </Link>

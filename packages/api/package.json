@@ -7,6 +7,9 @@
   "dependencies": {
     "@clerk/nextjs": "^4.6.15",
     "@my/db": "*",
+    "@supabase/auth-helpers-nextjs": "^0.5.4",
+    "@supabase/auth-helpers-react": "^0.3.1",
+    "@supabase/supabase-js": "^2.8.0",
     "@trpc/client": "10.9.0",
     "@trpc/server": "10.9.0",
     "superjson": "^1.9.1",

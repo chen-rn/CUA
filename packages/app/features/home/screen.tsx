@@ -45,7 +45,7 @@ export function HomeScreen() {
       <YStack space="$4" maw={600} px="$3">
         <XStack jc="center" ai="flex-end" fw="wrap" space="$2" mt="$-2">
           <Image
-            src="https://raw.githubusercontent.com/chen-rn/CUA/fb1d12ed8caefd8348e7a4c0c0367149a83f1d92/apps/nextjs/public/favicon.ico"
+            src="https://raw.githubusercontent.com/chen-rn/CUA/main/apps/nextjs/public/favicon.ico"
             accessibilityLabel="create-universal-app logo"
             width={50}
             height={50}

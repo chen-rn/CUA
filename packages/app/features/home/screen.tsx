@@ -7,6 +7,7 @@ import {
   Separator,
   XStack,
   YStack,
+  Image,
 } from "@my/ui";
 import React, { useEffect } from "react";
 import { useLink } from "solito/link";
@@ -41,8 +42,19 @@ export function HomeScreen() {
 
   return (
     <YStack f={1} jc="center" ai="center" p="$4" space>
-      <YStack space="$4" maw={600} px={"$3"}>
-        <H1 ta="center">🌌 create-universal-app</H1>
+      <YStack space="$4" maw={600} px="$3">
+        <XStack jc="center" ai="flex-end" fw="wrap" space="$2" mt="$-2">
+          <Image
+            src="https://raw.githubusercontent.com/chen-rn/CUA/fb1d12ed8caefd8348e7a4c0c0367149a83f1d92/apps/nextjs/public/favicon.ico"
+            accessibilityLabel="create-universal-app logo"
+            width={50}
+            height={50}
+            mt="$2"
+          />
+          <H1 ta="center" mt="$2">
+            create-universal-app
+          </H1>
+        </XStack>
         <Paragraph ta="center">
           This is a demo for create-universal-app. To read more about the
           philosophy behind it, visit{" "}
@@ -72,7 +84,7 @@ export function HomeScreen() {
       </YStack>
 
       <H3 ta="center">Some Demos</H3>
-      <YStack p={"$2"}>
+      <YStack p="$2">
         <Paragraph>tRPC Query Demo</Paragraph>
         {data?.map((entry) => (
           <Paragraph opacity={0.5} key={entry.id}>

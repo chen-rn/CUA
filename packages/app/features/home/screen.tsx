@@ -42,8 +42,8 @@ export function HomeScreen() {
   return (
     <YStack f={1} jc="center" ai="center" p="$4" space>
       <YStack space="$4" maw={600} px={"$3"}>
-        <H1 ta="center">create-universal-app</H1>
-        <Paragraph ta="left">
+        <H1 ta="center">🌌 create-universal-app</H1>
+        <Paragraph ta="center">
           This is a demo for create-universal-app. To read more about the
           philosophy behind it, visit{" "}
           <Anchor
@@ -55,7 +55,7 @@ export function HomeScreen() {
           </Anchor>{" "}
           (give it a ⭐️ if you like it!)
         </Paragraph>
-        <Paragraph>
+        <Paragraph ta="center">
           This template uses Expo, Next, Solito, tRPC, Tamagui, Clerk, and
           Prisma. If you're a beginner and is a little overwhelmed, I've also
           made a{" "}

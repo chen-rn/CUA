@@ -1,5 +1,3 @@
-import { supabase } from "app/utils/supabase";
-import { Session } from "@supabase/supabase-js";
 import {
   Anchor,
   Button,
@@ -12,8 +10,8 @@ import {
   Image,
 } from "@my/ui";
 import React, { useEffect } from "react";
-import { useLink } from "solito/link";
-import { SignedIn, SignedOut, useAuth } from "../../utils/clerk";
+import { supabase } from "app/utils/supabase";
+import { Session } from "@supabase/supabase-js";
 
 export function HomeScreen() {
   const { push } = useRouter();

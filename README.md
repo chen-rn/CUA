@@ -99,7 +99,6 @@ I recommend you either spin up a Postgres instance on Railway or use Supabase, y
 - Set up your environment variables properly by duplicating the `.env.example` file, removing `.example`, and entering your environment variables.
   - **CLERK_SECRET_KEY** & **NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY**: sign up on [clerk](https://clerk.dev/) to get your API keys
   - **DATABASE_URL** (**optional**): spin up a Postgres instance with Railway or Supabase (we're using SQLlite by default now, so you don't have to do this unless you're ready for production!)
-- You need to manually enter your clerk frontend API key into `/packages/app/provider/auth/index.tsx`.
 - `yarn db-push` to push our Prisma schema to our DB.
 
 ### 2. Start up your project

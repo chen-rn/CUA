@@ -1,15 +1,16 @@
 import { ClerkProvider } from "@clerk/clerk-expo";
 import { tokenCache } from "./cache";
 
-//this should be the same as your next js frontend key
-const CLERK_PUBLISHABLE_KEY = "pk_test_ablablablablabla"; //enter your clerk key here!
+const frontendApi = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
+  if (typeof frontendApi === "undefined")
+    throw new Error(
+      "Clerk API key not found. Please add NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY to your .env file."
+    );
+
   return (
-    <ClerkProvider
-      frontendApi={CLERK_PUBLISHABLE_KEY}
-      tokenCache={tokenCache}
-    >
+    <ClerkProvider frontendApi={frontendApi} tokenCache={tokenCache}>
       {children}
     </ClerkProvider>
   );

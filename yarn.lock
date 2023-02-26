@@ -4721,6 +4721,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-native-dotenv@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@types/react-native-dotenv@npm:0.2.0"
+  checksum: 23d59b8ebd35e8fe693531f9c630f7518cb149c06694c8c35fc3b628ac8e8e26cc602cec9372447873fbbb13bf0c40bbd951ba5306c1b83b169cc3a927cb935f
+  languageName: node
+  linkType: hard
+
 "@types/react-native@npm:~0.70.6":
   version: 0.70.9
   resolution: "@types/react-native@npm:0.70.9"
@@ -8059,6 +8066,7 @@ __metadata:
     "@my/ui": "*"
     "@tamagui/babel-plugin": 1.0.17
     "@types/react-native": ~0.70.6
+    "@types/react-native-dotenv": ^0.2.0
     app: "*"
     babel-plugin-module-resolver: ^4.1.0
     babel-plugin-transform-inline-environment-variables: ^0.4.4
@@ -8078,6 +8086,7 @@ __metadata:
     react: 18.1.0
     react-dom: 18.1.0
     react-native: 0.70.5
+    react-native-dotenv: ^3.4.8
     react-native-gesture-handler: ~2.8.0
     react-native-safe-area-context: 4.4.1
     react-native-screens: ~3.18.0
@@ -13232,6 +13241,17 @@ prisma@latest:
     jscodeshift: ^0.13.1
     nullthrows: ^1.1.1
   checksum: 2a50ad71e09bc8cbb3694057cf47d6e9665c16f3968d1dc2b71e83c8c4e7be3b07b74bea08750ec9c8f6c60e6c746a5f695963c8694e5a76edcbce35a53a6a06
+  languageName: node
+  linkType: hard
+
+"react-native-dotenv@npm:^3.4.8":
+  version: 3.4.8
+  resolution: "react-native-dotenv@npm:3.4.8"
+  dependencies:
+    dotenv: ^16.0.3
+  peerDependencies:
+    "@babel/runtime": ^7.20.6
+  checksum: 8443cec44862d3e110f236b1120d8a1f829cb4545a85c8462e6c01935aa216f50b05eb659661db29939d4d293ce7de6212bf877963e3b37f6c900629f6546d67
   languageName: node
   linkType: hard
 

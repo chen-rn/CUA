@@ -6,7 +6,7 @@
     "dev": "yarn with-env next dev",
     "build": "yarn with-env next build",
     "with-env": "dotenv -e ../../.env --",
-    "clean": "rm -rf .next .turbo node_modules",
+    "clean": "rm -rf .next .turbo node_modules .tamagui",
     "start": "next start",
     "serve": "NODE_ENV=production next start --port 8151",
     "lint": "next lint",

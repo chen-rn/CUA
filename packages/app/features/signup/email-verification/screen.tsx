@@ -18,16 +18,16 @@ export function EmailVerificationScreen() {
     await signUp.attemptEmailAddressVerification({ code: verificationCode });
 
     if (signUp.status === "complete") {
+      const { createdSessionId } = signUp;
+      if (createdSessionId) {
+        await setSession(createdSessionId);
+      }
       /* add user id and email into our database */
       createUserMutation.mutate({
         id: signUp.createdUserId!,
         email: signUp.emailAddress!,
       });
       push("/");
-      const { createdSessionId } = signUp;
-      if (createdSessionId) {
-        await setSession(createdSessionId);
-      }
     } else alert("Invalid verification code");
   };
   return (

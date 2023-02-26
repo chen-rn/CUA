@@ -106,6 +106,7 @@ I recommend you either spin up a Postgres instance on Railway or use Supabase, y
 - `yarn web` to start a web dev server.
 - `yarn native` to run on iOS or Android. **PS**: for this to work, you'll need your web app running on localhost:3000, remember that your NextJS app is also your backend!
 - `yarn studio` to start up your Prisma Studio. **PS**: the tRPC query will show nothing unless you manually open up Prisma and add a "post", or query an user info in the DB!
+- `yarn dev` to start up all packages and applications simultaneously.
 
 ### 3. Adding a new screen
 

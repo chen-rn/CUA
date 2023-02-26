@@ -10,6 +10,7 @@
     "schema": "./packages/db/prisma/schema.prisma"
   },
   "scripts": {
+    "dev": "turbo run dev",
     "web": "turbo run dev --filter nextjs",
     "native": "cd apps/expo && yarn dev",
     "desktop": "turbo run dev:tauri --filter nextjs",

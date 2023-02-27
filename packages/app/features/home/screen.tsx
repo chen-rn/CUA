@@ -9,7 +9,8 @@ import {
   YStack,
   Image,
 } from "@my/ui";
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "solito/router";
 import { supabase } from "app/utils/supabase";
 import { Session } from "@supabase/supabase-js";
 

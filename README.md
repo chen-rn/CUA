@@ -73,13 +73,13 @@ Feel free to use Nativewind & Tailwind instead of Tamagui, you should be able to
 
 ### Why Clerk for auth?
 
-On a high level, clerk promises an overall user management solution instead of just authentication with things like the User Profile, Banning and Device management built-in. In practice I've personally had an great time using Clerk for Expo projects compared to other solutions like Firebase or Supabase auth for my projects.
+On a high level, clerk promises an overall user management solution instead of just authentication with things like the User Profile, Banning and Device management built-in. In practice, they have a very similar Expo/Next library with built in Hooks that are very nice to use! I've personally had an great time using Clerk compared to other solutions like Firebase or Supabase.
 
-#### *Practical things I like about Clerk*
-  
+#### *Practical things*
+
 - Really nice hooks & components (SignedIn/SignedOut) that work for both Expo and NextJS.
 - SDKs for all 3 platforms: Expo frontend, NextJS frontend, NextJS serverside.
-- Fantastic support and help from their team (from personal experience).
+- Fantastic support and help from their team on Discord(from personal experience).
 
 #### *Downsides*
 

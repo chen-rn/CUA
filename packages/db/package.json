@@ -1,6 +1,6 @@
 {
   "name": "@my/db",
-  "packageManager": "yarn@3.2.3",
+  "packageManager": "pnpm@7.29.1",
   "version": "0.1.0",
   "main": "./index.ts",
   "types": "./index.ts",

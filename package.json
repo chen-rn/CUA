@@ -5,24 +5,24 @@
     "apps/*",
     "packages/*"
   ],
-  "packageManager": "yarn@3.3.1",
+  "packageManager": "pnpm@7.29.1",
   "prisma": {
     "schema": "./packages/db/prisma/schema.prisma"
   },
   "scripts": {
     "dev": "turbo run dev",
     "web": "turbo run dev --filter nextjs",
-    "native": "cd apps/expo && yarn dev",
+    "native": "cd apps/expo && pnpm run dev",
     "desktop": "turbo run dev:tauri --filter nextjs",
     "build": "turbo build",
     "clean": "rm -rf node_modules",
-    "clean:workspaces": "turbo clean ; rm -rf .yarn/cache .yarn/install-state.gz",
+    "clean:workspaces": "turbo clean",
     "db-push": "turbo db-push",
-    "postinstall": "yarn build:ui && yarn generate",
-    "generate": "cd packages/db && yarn prisma generate",
-    "build:ui": "cd packages/ui && yarn build",
+    "postinstall": "pnpm run build:ui && pnpm run generate",
+    "generate": "cd packages/db && pnpm run prisma generate",
+    "build:ui": "cd packages/ui && pnpm run build",
     "build-desktop": "turbo run build:tauri --filter nextjs",
-    "studio": " cd packages/db && yarn prisma:studio",
+    "studio": " cd packages/db && pnpm run prisma:studio",
     "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader"
   },
   "resolutions": {

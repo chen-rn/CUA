@@ -11,12 +11,12 @@
     "serve": "NODE_ENV=production next start --port 8151",
     "lint": "next lint",
     "export": "next export",
-    "dev:tauri": "yarn tauri dev",
-    "build:tauri": "yarn tauri build"
+    "dev:tauri": "pnpm run tauri dev",
+    "build:tauri": "pnpm run tauri build"
   },
   "dependencies": {
     "@tamagui/next-theme": "1.0.17",
-    "app": "*",
+    "app": "workspace:*",
     "dotenv-cli": "^7.0.0",
     "next": "^13.0.6",
     "raf": "^3.4.1",

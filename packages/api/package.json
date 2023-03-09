@@ -1,12 +1,12 @@
 {
   "name": "@my/api",
   "version": "0.0.0",
-  "packageManager": "yarn@3.2.3",
+  "packageManager": "pnpm@7.29.1",
   "types": "./index.ts",
   "license": "MIT",
   "dependencies": {
     "@clerk/nextjs": "^4.6.15",
-    "@my/db": "*",
+    "@my/db": "workspace:*",
     "@trpc/client": "10.9.0",
     "@trpc/server": "10.9.0",
     "superjson": "^1.9.1",

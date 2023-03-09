@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "@clerk/nextjs": "^4.6.15",
-    "@my/ui": "*",
+    "@my/ui": "workspace:*",
     "@tamagui/animations-react-native": "^1.0.17",
     "@tamagui/colors": "^1.0.17",
     "@tamagui/font-inter": "^1.0.17",

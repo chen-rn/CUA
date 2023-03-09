@@ -1,15 +1,12 @@
 {
   "name": "myapp-monorepo",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "packageManager": "pnpm@7.29.1",
   "prisma": {
     "schema": "./packages/db/prisma/schema.prisma"
   },
   "scripts": {
+    "preinstall": "npx only-allow pnpm", 
     "dev": "turbo run dev",
     "web": "turbo run dev --filter nextjs",
     "native": "cd apps/expo && pnpm run dev",

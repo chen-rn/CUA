@@ -112,15 +112,14 @@ I recommend you either spin up a Postgres instance on Railway or use Supabase, y
 
 To automate the process explained below you can use the VSCode extension [t3-cua-tools](https://github.com/albbus-stack/t3-cua-tools), also available on the [marketplace](https://marketplace.visualstudio.com/items?itemName=albbus-stack.t3-cua-tools). It will create the files and add the necessary imports and navigation code for you.
 
-- Create your screens in `packages/app/features`.
-- For smaller components, feel free to put them in `/packages/ui`.
-- For new routes, add them in `/packages/api/src/router`, and make sure you merge them in `index.ts`.
+- Create new screens in `packages/app/features/`.
+- For smaller components feel free to put them in `packages/ui/`.
+- For new routes add a new `routeName.ts` in `packages/api/src/router/` and make sure to merge it in the `index.ts` app router.
 - When you add a new page or screen, you'll need to add the page into both Expo and NextJS:
   - **Expo**
-    - Go to `packages/app/navigation/native/index.tsx` and add the page following the example.
-    - Go to `packages/app/provider/navigation/index.tsx` and add the page following the example.
+     - Go to `apps/expo/app/` and create a new `routeName.tsx` that's importing your element from `/app/features/screenName/`.
   - **Next**
-    - Go to `apps/next/pages`, create the folder with the name being your route, and an `index.tsx` that's importing your element from `/app/feature/home`.
+    - Go to `apps/next/pages/`, create a new folder with the name being your route and an `index.tsx` that's importing your element from `/app/features/screenName/`.
 
 ## Deploying to Vercel
 

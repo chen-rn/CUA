@@ -6,7 +6,7 @@
     "schema": "./packages/db/prisma/schema.prisma"
   },
   "scripts": {
-    "preinstall": "npx only-allow pnpm", 
+    "preinstall": "npx only-allow pnpm",
     "dev": "turbo run dev",
     "web": "turbo run dev --filter nextjs",
     "native": "cd apps/expo && pnpm run dev",
@@ -21,20 +21,6 @@
     "build-desktop": "turbo run build:tauri --filter nextjs",
     "studio": " cd packages/db && pnpm run prisma:studio",
     "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader"
-  },
-  "resolutions": {
-    "esbuild": "0.15.6",
-    "@types/react": "17.0.21",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-refresh": "^0.14.0",
-    "react-native-svg": "13.4.0",
-    "react-native-web": "0.18.9"
-  },
-  "dependencies": {
-    "@babel/runtime": "^7.18.9",
-    "dotenv": "^16.0.3",
-    "dotenv-cli": "^6.0.0"
   },
   "devDependencies": {
     "@manypkg/cli": "^0.19.1",

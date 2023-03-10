@@ -32,6 +32,8 @@
     "@types/node": "^18.6.4",
     "critters": "^0.0.16",
     "eslint-config-next": "^13.0.4",
-    "next-images": "^1.8.4"
+    "next-images": "^1.8.4",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*"
   }
 }

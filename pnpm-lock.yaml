@@ -228,12 +228,14 @@ importers:
       '@tamagui/theme-base': ^1.0.17
       '@types/node': ^18.6.4
       '@types/react': ^18.0.28
+      eslint-config-custom: workspace:*
       react: 18.2.0
       react-dom: 18.2.0
       react-native: ^0.71.4
       react-native-web: 0.18.9
       solito: 2.1.3
       tamagui: ^1.0.17
+      tsconfig: workspace:*
     dependencies:
       '@babel/core': 7.20.12
       '@babel/preset-env': 7.20.2_@babel+core@7.20.12
@@ -252,7 +254,9 @@ importers:
     devDependencies:
       '@tamagui/build': 1.0.17
       '@types/node': 18.11.18
+      eslint-config-custom: link:../eslint-config-custom
       react-native-web: 0.18.9_biqbaboplfbrettd7655fr4n2y
+      tsconfig: link:../tsconfig
 
 packages:
 

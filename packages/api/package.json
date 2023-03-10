@@ -1,19 +1,24 @@
 {
   "name": "@my/api",
   "version": "0.0.0",
-  "packageManager": "yarn@3.2.3",
+  "packageManager": "pnpm@7.29.1",
   "types": "./index.ts",
   "license": "MIT",
   "dependencies": {
     "@clerk/nextjs": "^4.6.15",
-    "@my/db": "*",
+    "@my/db": "workspace:*",
     "@trpc/client": "10.9.0",
     "@trpc/server": "10.9.0",
+    "next": "^13.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-test-renderer": "^18.2.0",
     "superjson": "^1.9.1",
     "zod": "^3.18.0"
   },
   "devDependencies": {
     "eslint": "^8.28.0",
-    "typescript": "4.9.4"
+    "typescript": "4.9.4",
+    "tsconfig": "workspace:*"
   }
 }

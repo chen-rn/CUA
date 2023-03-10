@@ -14,7 +14,7 @@ import { OAuthStrategy } from "@clerk/types";
 interface Props {
   type: "sign-up" | "sign-in";
   handleOAuthWithPress: (strategy: OAuthStrategy) => void;
-  handleEmailWithPress: (emailAddress, password) => void;
+  handleEmailWithPress: (emailAddress: string, password: string) => void;
 }
 
 export const SignUpSignInComponent: React.FC<Props> = ({

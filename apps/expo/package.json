@@ -6,17 +6,17 @@
   "scripts": {
     "dev": "expo start -c",
     "clean": "rm -rf .expo .turbo node_modules",
-    "android": "TAMAGUI_TARGET=native yarn expo run:android",
-    "ios": "TAMAGUI_TARGET=native yarn expo run:ios",
-    "web": "TAMAGUI_TARGET=web yarn expo start --web",
+    "android": "TAMAGUI_TARGET=native pnpm run expo run:android",
+    "ios": "TAMAGUI_TARGET=native pnpm run expo run:ios",
+    "web": "TAMAGUI_TARGET=web pnpm run expo start --web",
     "eject": "expo eject"
   },
   "dependencies": {
     "@babel/runtime": "^7.18.9",
     "@clerk/clerk-expo": "^0.10.16",
-    "@my/ui": "*",
+    "@my/ui": "workspace:*",
     "@types/react-native": "~0.70.6",
-    "app": "*",
+    "app": "workspace:*",
     "babel-plugin-module-resolver": "^4.1.0",
     "expo": "^47.0.8",
     "expo-auth-session": "^3.8.0",
@@ -47,6 +47,8 @@
     "@types/react-native-dotenv": "^0.2.0",
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "react-native-dotenv": "^3.4.8",
-    "typescript": "4.9.4"
+    "typescript": "4.9.4",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*"
   }
 }

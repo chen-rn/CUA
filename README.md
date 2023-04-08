@@ -15,7 +15,7 @@ If you have any question while using this, feel free to join our [👾Discord�
 **This repo is made on top of**:
 
 - [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo): expo, next, trpc, prisma, nextauth - no UI code share & no mobile auth.
-- [t3-turbo-and-clerk](https://github.com/clerkinc/t3-turbo-and-clerk): t3 turbo with auth for mobile + web - still no  UI code share.
+- [t3-turbo-and-clerk](https://github.com/clerkinc/t3-turbo-and-clerk): t3 turbo with auth for mobile + web - still no UI code share.
 - [tamagui + solito starter](https://github.com/tamagui/tamagui/tree/master/starters/next-expo-solito): expo + next code share - no tRPC & no built-in auth.
 
 ## 🌟 How it works
@@ -39,7 +39,7 @@ If you have any question while using this, feel free to join our [👾Discord�
 
 Your **frontend** code will be in React Native, meaning that you're going to write Views instead of divs. Since we are using Tamagui in particular, we're gonna write Stacks instead Views.
 
-- `apps/expo` and `apps/next` are practically empty folders that are simply *referencing* your `packages/app` folder.
+- `apps/expo` and `apps/next` are practically empty folders that are simply _referencing_ your `packages/app` folder.
 - If you're familiar with React Native, it's going to feel as if you're writing a React Native app, that just happens to also run really well on the web (with SSR and all of those goodies).
 - Your code will get rendered as HTML/CSS on the NextJS side and normal React Native on the native side.
 
@@ -49,39 +49,39 @@ Your **backend** code is gonna be in `packages/api`. NextJS is going to run this
 - Your backend and your DB will communicate with Prisma (ORM).
 - Mobile auth is done with Clerk Expo, and web auth is done with Clerk React and Clerk Next.
 
-*Note: you don't need to understand how everything works in detail before you can start using this template. As someone that wants to know how every bolt and nut works, I often get "blocked" by my own perfectionism, so I'm just throwing this out there in case you're feeling the same about something.*
+_Note: you don't need to understand how everything works in detail before you can start using this template. As someone that wants to know how every bolt and nut works, I often get "blocked" by my own perfectionism, so I'm just throwing this out there in case you're feeling the same about something._
 
 ## 💭 Behind the decisions
 
 ### Why Tamagui for UI & styling?
 
-#### *What is Tamagui?*
+#### _What is Tamagui?_
 
-*TLDR*: it's for making things look pretty on both web and mobile while being really really fast and easy to work with. In more detail, Tamagui has 3 things:
+_TLDR_: it's for making things look pretty on both web and mobile while being really really fast and easy to work with. In more detail, Tamagui has 3 things:
 
-- **Compiler**: their unique way of turning your *"style related code"* into pure CSS faster. Most important thing here is probably the tree flattening thing they do.
+- **Compiler**: their unique way of turning your _"style related code"_ into pure CSS faster. Most important thing here is probably the tree flattening thing they do.
 - **Core**: a small set of components they built aimed to replace View and Text that you use in React Native, with some advantages.
 - **UI**: a set of UI components that the Tama team built using Core.
 
 Check out their [docs](https://tamagui.dev/docs/intro/introduction) for more informations.
 
-#### *Why not Nativewind & Tailwind?*
+#### _Why not Nativewind & Tailwind?_
 
 What I like about Tamagui is that it's simultaneously Tailwind and DaisyUI that's built from the ground up designed for universal apps with its own compiler and core components.
 
-Feel free to use Nativewind & Tailwind instead of Tamagui, you should be able to set things up fairly easily (and if you do *please* contribute to this template creating a branch with the Nativewind installation).
+Feel free to use Nativewind & Tailwind instead of Tamagui, you should be able to set things up fairly easily (and if you do _please_ contribute to this template creating a branch with the Nativewind installation).
 
 ### Why Clerk for auth?
 
 On a high level, clerk promises an overall user management solution instead of just authentication with things like the User Profile, Banning and Device management built-in. In practice, they have a very similar Expo/Next library with built in Hooks that are very nice to use! I've personally had an great time using Clerk compared to other solutions like Firebase or Supabase.
 
-#### *Practical things*
+#### _Practical things_
 
 - Really nice hooks & components (SignedIn/SignedOut) that work for both Expo and NextJS.
 - SDKs for all 3 platforms: Expo frontend, NextJS frontend, NextJS serverside.
 - Fantastic support and help from their team on Discord(from personal experience).
 
-#### *Downsides*
+#### _Downsides_
 
 - Doesn't do SMS unless you pay: big negative for mobile but makes up for it with easy oauth.
 - Premium plan expensive compared to the alternatives.
@@ -95,18 +95,18 @@ I recommend you either spin up a Postgres instance on Railway or use Supabase, y
 
 ### 1. Set up project
 
-- `yarn install` to install packages and build the project.
+- `pnpm install` to install packages and build the project.
 - Set up your environment variables properly by duplicating the `.env.example` file, removing `.example`, and entering your environment variables.
   - **CLERK_SECRET_KEY** & **NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY**: sign up on [clerk](https://clerk.dev/) to get your API keys
   - **DATABASE_URL** (**optional**): spin up a Postgres instance with Railway or Supabase (we're using SQLlite by default now, so you don't have to do this unless you're ready for production!)
-- `yarn db-push` to push our Prisma schema to our DB.
+- `pnpm run db-push` to push our Prisma schema to our DB.
 
 ### 2. Start up your project
 
-- `yarn web` to start a web dev server.
-- `yarn native` to run on iOS or Android. **PS**: for this to work, you'll need your web app running on localhost:3000, remember that your NextJS app is also your backend!
-- `yarn studio` to start up your Prisma Studio. **PS**: the tRPC query will show nothing unless you manually open up Prisma and add a "post", or query an user info in the DB!
-- `yarn dev` to start up all packages and applications simultaneously.
+- `pnpm run web` to start a web dev server.
+- `pnpm native` to run on iOS or Android. **PS**: for this to work, you'll need your web app running on localhost:3000, remember that your NextJS app is also your backend!
+- `pnpm run studio` to start up your Prisma Studio. **PS**: the tRPC query will show nothing unless you manually open up Prisma and add a "post", or query an user info in the DB!
+- `pnpm run dev` to start up all packages and applications simultaneously.
 
 ### 3. Adding a new screen
 
@@ -117,7 +117,7 @@ To automate the process explained below you can use the VSCode extension [t3-cua
 - For new routes add a new `routeName.ts` in `packages/api/src/router/` and make sure to merge it in the `index.ts` app router.
 - When you add a new page or screen, you'll need to add the page into both Expo and NextJS:
   - **Expo**
-     - Go to `apps/expo/app/` and create a new `routeName.tsx` that's importing your element from `/app/features/screenName/`.
+    - Go to `apps/expo/app/` and create a new `routeName.tsx` that's importing your element from `/app/features/screenName/`.
   - **Next**
     - Go to `apps/next/pages/`, create a new folder with the name being your route and an `index.tsx` that's importing your element from `/app/features/screenName/`.
 
@@ -135,7 +135,7 @@ After you have created a new project on Vercel and linked it with your Github re
 ## FAQ
 
 1. **Where should I install the packages?**
-If it contains native code you must install it into the `/expo` folder.
+   If it contains native code you must install it into the `/expo` folder.
 
 2. **How do I know if it contains native code?**
-In general if it involves some interactions with the phone OS like the APIs to interact with storage, camera, gyro, notification, etc. it involves native code!
+   In general if it involves some interactions with the phone OS like the APIs to interact with storage, camera, gyro, notification, etc. it involves native code!

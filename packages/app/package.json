@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "@clerk/nextjs": "^4.6.15",
-    "@my/ui": "*",
+    "@my/ui": "workspace:*",
     "@tamagui/animations-react-native": "^1.0.17",
     "@tamagui/colors": "^1.0.17",
     "@tamagui/font-inter": "^1.0.17",
@@ -19,6 +19,8 @@
     "@trpc/next": "10.9.0",
     "@trpc/react-query": "10.9.0",
     "expo-linking": "3.3.0",
-    "solito": "2.1.3"
+    "solito": "2.1.3",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*"
   }
 }

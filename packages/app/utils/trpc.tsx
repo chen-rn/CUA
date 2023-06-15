@@ -1,4 +1,4 @@
-import { createTRPCReact } from '@trpc/react-query'
+import { HTTPHeaders, createTRPCReact } from '@trpc/react-query'
 import type { AppRouter } from '@my/api'
 /**
  * Extend this function when going to production by
@@ -61,7 +61,7 @@ export const TRPCProvider: React.FC<{
             const authToken = await getToken()
             return {
               Authorization: authToken,
-            }
+            } as HTTPHeaders
           },
           url: `${getBaseUrl()}/api/trpc`,
         }),

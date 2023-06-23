@@ -8,7 +8,7 @@ export const entry = pgTable("entry", {
   urlFrontPhotoHD: text("url_front_photo_hd"),
   urlBackPhotoThumbnail: text("url_back_photo_thumbnail"),
   urlBackPhotoHD: text("url_back_photo_hd"),
-  userId: text("user_id")
+  userId: serial("user_id")
     .notNull()
     .references(() => user.id),
   createdAt: date("created_at", { mode: "date" }).defaultNow(),

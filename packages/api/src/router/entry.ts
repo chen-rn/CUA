@@ -25,7 +25,7 @@ export const entryRouter = router({
         urlFrontPhotoHD: input.urlFrontPhotoHD,
         urlBackPhotoThumbnail: input.urlBackPhotoThumbnail,
         urlBackPhotoHD: input.urlBackPhotoHD,
-        userId: ctx.user.id,
+        userId: parseInt(ctx.user.id),
       });
     }),
 });

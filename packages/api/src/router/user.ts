@@ -2,10 +2,15 @@
 //grab the images for the corresponding user
 import { router, publicProcedure, protectedProcedure } from "../trpc";
 import { z } from "zod";
+import { user } from "@my/db/drizzle/user";
+import { eq } from "drizzle-orm";
 
 export const userRouter = router({
   current: protectedProcedure.query(({ ctx }) => {
-    return ctx.prisma.user.findFirst({ where: { id: ctx.user.id } });
+    return ctx.drizzle
+      .select()
+      .from(user)
+      .where(eq(user.id, parseInt(ctx.user.id)));
   }),
   create: protectedProcedure
     .input(
@@ -16,11 +21,9 @@ export const userRouter = router({
     )
     .mutation(({ ctx, input }) => {
       //create user and link it to the user
-      return ctx.prisma.user.create({
-        data: {
-          email: input.email,
-          id: input.id,
-        },
+      return ctx.drizzle.insert(user).values({
+        email: input.email,
+        id: parseInt(input.id),
       });
     }),
 });

@@ -2,11 +2,9 @@
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
     "db-generate": {
-      "inputs": ["prisma/schema.prisma"],
       "cache": false
     },
     "db-push": {
-      "inputs": ["prisma/schema.prisma"],
       "cache": false
     },
     "dev": {
@@ -19,10 +17,6 @@
     },
     "build:tauri": {
       "dependsOn": ["^db-generate"],
-      "cache": false
-    },
-    "studio": {
-      "inputs": ["prisma/schema.prisma"],
       "cache": false
     },
     "build": {
@@ -43,5 +37,9 @@
       "cache": false
     }
   },
-  "globalEnv": ["DATABASE_URL", "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY", "CLERK_SECRET_KEY"]
+  "globalEnv": [
+    "DATABASE_URL",
+    "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY",
+    "CLERK_SECRET_KEY"
+  ]
 }

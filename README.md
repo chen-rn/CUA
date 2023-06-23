@@ -4,7 +4,7 @@
 
 ## 🌌 What is this?
 
-**create-universal-app (CUA)** is an opinionated template for creating full-stack universal (mobile + web codeshare) apps with built-in auth for both mobile and web using **Expo** (mobile), **NextJS** (web), **tRPC**, **Prisma**, **Tamagui** (UI + styling), and **Clerk** (mobile + web auth). A **demo** is live at <https://cua-demo.vercel.app/>.
+**create-universal-app (CUA)** is an opinionated template for creating full-stack universal (mobile + web codeshare) apps with built-in auth for both mobile and web using **Expo** (mobile), **NextJS** (web), **tRPC**, **Drizzle**, **Tamagui** (UI + styling), and **Clerk** (mobile + web auth). A **demo** is live at <https://cua-demo.vercel.app/>.
 
 [Here's](https://youtu.be/aTEv0-ZBbWk) a 20 minute Youtube tutorial going over everything if that's more of your style!
 
@@ -14,7 +14,7 @@ If you have any question while using this, feel free to join our [👾Discord�
 
 **This repo is made on top of**:
 
-- [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo): expo, next, trpc, prisma, nextauth - no UI code share & no mobile auth.
+- [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo): expo, next, trpc, drizzle, nextauth - no UI code share & no mobile auth.
 - [t3-turbo-and-clerk](https://github.com/clerkinc/t3-turbo-and-clerk): t3 turbo with auth for mobile + web - still no  UI code share.
 - [tamagui + solito starter](https://github.com/tamagui/tamagui/tree/master/starters/next-expo-solito): expo + next code share - no tRPC & no built-in auth.
 
@@ -27,7 +27,7 @@ If you have any question while using this, feel free to join our [👾Discord�
   - expo
 - **packages**
   - ui (your reusable components with tamagui)
-  - db (db schema & prisma stuff)
+  - db (db schema & drizzle stuff)
   - app
     - features (⭐️ all of your native frontend code will go here ⭐️)
     - navigation (unifying web + mobile navigation)
@@ -46,7 +46,7 @@ Your **frontend** code will be in React Native, meaning that you're going to wri
 Your **backend** code is gonna be in `packages/api`. NextJS is going to run this code in a serverless environment, if you're a little confused about how that works [here](https://www.youtube.com/watch?v=2cB5Fh46Vi4&t=1017s)'s a good video by Theo that talks about NextJS as a backend framework.
 
 - Your backend and frontend will communicate with tRPC.
-- Your backend and your DB will communicate with Prisma (ORM).
+- Your backend and your DB will communicate with Drizzle (ORM).
 - Mobile auth is done with Clerk Expo, and web auth is done with Clerk React and Clerk Next.
 
 *Note: you don't need to understand how everything works in detail before you can start using this template. As someone that wants to know how every bolt and nut works, I often get "blocked" by my own perfectionism, so I'm just throwing this out there in case you're feeling the same about something.*
@@ -99,13 +99,12 @@ I recommend you either spin up a Postgres instance on Railway or use Supabase, y
 - Set up your environment variables properly by duplicating the `.env.example` file, removing `.example`, and entering your environment variables.
   - **CLERK_SECRET_KEY** & **NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY**: sign up on [clerk](https://clerk.dev/) to get your API keys
   - **DATABASE_URL** (**optional**): spin up a Postgres instance with Railway or Supabase (we're using SQLlite by default now, so you don't have to do this unless you're ready for production!)
-- `yarn db-push` to push our Prisma schema to our DB.
+- `yarn db-push` to push our Drizzle schema to our DB.
 
 ### 2. Start up your project
 
 - `yarn web` to start a web dev server.
 - `yarn native` to run on iOS or Android. **PS**: for this to work, you'll need your web app running on localhost:3000, remember that your NextJS app is also your backend!
-- `yarn studio` to start up your Prisma Studio. **PS**: the tRPC query will show nothing unless you manually open up Prisma and add a "post", or query an user info in the DB!
 - `yarn dev` to start up all packages and applications simultaneously.
 
 ### 3. Adding a new screen

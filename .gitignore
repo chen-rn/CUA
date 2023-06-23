@@ -54,3 +54,9 @@ thumbs.db
 
 # sqlite
 **/*.sqlite
+
+# sql
+**/*.sql
+
+# drizzle
+**/drizzle/meta/*

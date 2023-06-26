@@ -1,18 +1,19 @@
-import { date, pgTable, serial, text } from "drizzle-orm/pg-core";
+import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
+import { sql } from "drizzle-orm";
 import { user } from "./user";
 
-export const entry = pgTable("entry", {
-  id: serial("id").primaryKey(),
-  entryDay: date("entry_day", { mode: "date" }),
+export const entry = sqliteTable("entry", {
+  id: integer("id").primaryKey(),
+  entryDay: text("entry_day"),
   urlFrontPhotoThumbnail: text("url_front_photo_thumbnail"),
   urlFrontPhotoHD: text("url_front_photo_hd"),
   urlBackPhotoThumbnail: text("url_back_photo_thumbnail"),
   urlBackPhotoHD: text("url_back_photo_hd"),
-  userId: serial("user_id")
+  userId: integer("user_id")
     .notNull()
     .references(() => user.id),
-  createdAt: date("created_at", { mode: "date" }).defaultNow(),
-  updatedAt: date("updated_at", { mode: "date" }),
+  createdAt: text("createdAt").default(sql`CURRENT_TIMESTAMP`),
+  updatedAt: text("updatedAt"),
 });
 
 // model Entry {

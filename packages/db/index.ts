@@ -1,14 +1,12 @@
 import {
   drizzle as drizzleDb,
-  PostgresJsDatabase,
-} from "drizzle-orm/postgres-js";
-import postgres from "postgres";
+  BetterSQLite3Database,
+} from "drizzle-orm/better-sqlite3";
+import Database from "better-sqlite3";
 
-const client = postgres(
-  process.env.DATABASE_URL || "postgres://localhost:5432/drizzle"
-);
+const client = new Database("sqlite.db");
 
-type DrizzleClient = PostgresJsDatabase<Record<string, never>>;
+type DrizzleClient = BetterSQLite3Database<Record<string, never>>;
 
 declare global {
   // allow global `var` declarations

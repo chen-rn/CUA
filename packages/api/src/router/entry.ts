@@ -20,7 +20,7 @@ export const entryRouter = router({
     .mutation(({ ctx, input }) => {
       //create entry and link it to the user
       return ctx.drizzle.insert(entry).values({
-        entryDay: input.entryDay,
+        entryDay: input.entryDay.toISOString(),
         urlFrontPhotoThumbnail: input.urlFrontPhotoThumbnail,
         urlFrontPhotoHD: input.urlFrontPhotoHD,
         urlBackPhotoThumbnail: input.urlBackPhotoThumbnail,

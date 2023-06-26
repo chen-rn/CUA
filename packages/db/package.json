@@ -7,19 +7,20 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "drizzle:generate": "yarn with-env drizzle-kit generate:pg",
-    "drizzle:migrate": "yarn with-env drizzle-kit generate:pg",
-    "drizzle:migrate:dev": "yarn with-env drizzle-kit generate:pg",
+    "drizzle:generate": "yarn with-env drizzle-kit generate:sqlite",
+    "drizzle:migrate": "yarn with-env drizzle-kit generate:sqlite",
+    "drizzle:migrate:dev": "yarn with-env drizzle-kit generate:sqlite",
     "clean": "rm -rf .turbo node_modules",
     "with-env": "dotenv -e ../../.env --",
-    "db-push": "yarn db-generate",
-    "db-generate": "yarn with-env drizzle-kit generate:pg"
+    "db-push": "yarn with-env drizzle-kit push:sqlite",
+    "db-generate": "yarn with-env drizzle-kit generate:sqlite"
   },
   "dependencies": {
-    "drizzle-orm": "^0.27.0",
-    "postgres": "^3.3.5"
+    "better-sqlite3": "^8.4.0",
+    "drizzle-orm": "^0.27.0"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.4",
     "dotenv-cli": "^6.0.0",
     "drizzle-kit": "^0.19.2",
     "typescript": "4.9.4"

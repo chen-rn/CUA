@@ -1,11 +1,12 @@
-import { date, pgTable, serial, text } from "drizzle-orm/pg-core";
+import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
+import { sql } from "drizzle-orm";
 
-export const user = pgTable("users", {
-  id: serial("id").primaryKey(),
+export const user = sqliteTable("users", {
+  id: integer("id").primaryKey(),
   name: text("name"),
   email: text("email"),
-  createdAt: date("created_at", { mode: "date" }).defaultNow(),
-  updatedAt: date("updated_at", { mode: "date" }),
+  createdAt: text("createdAt").default(sql`CURRENT_TIMESTAMP`),
+  updatedAt: text("updatedAt"),
 });
 
 // user model

@@ -12,8 +12,8 @@
     "drizzle:migrate:dev": "yarn with-env drizzle-kit generate:pg",
     "clean": "rm -rf .turbo node_modules",
     "with-env": "dotenv -e ../../.env --",
-    "db-push": "yarn with-env drizzle db push",
-    "db-generate": "yarn with-env drizzle generate"
+    "db-push": "yarn db-generate",
+    "db-generate": "yarn with-env drizzle-kit generate:pg"
   },
   "dependencies": {
     "drizzle-orm": "^0.27.0",

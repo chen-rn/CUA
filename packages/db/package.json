@@ -10,14 +10,14 @@
   },
   "scripts": {
     "build": "tsc",
-    "prisma:generate": "yarn with-env prisma generate && yarn with-env prisma db seed",
+    "prisma:generate": "yarn with-env prisma generate",
     "prisma:studio": "yarn with-env prisma studio",
     "prisma:migrate": "yarn with-env prisma migrate",
     "prisma:migrate:dev": "yarn with-env prisma migrate dev",
     "clean": "rm -rf .turbo node_modules",
     "with-env": "dotenv -e ../../.env --",
     "dev": "yarn with-env prisma studio --port 5556 --browser=none",
-    "db-push": "yarn with-env prisma db push",
+    "db-push": "yarn with-env prisma db push && yarn with-env prisma db seed",
     "db-generate": "yarn with-env prisma generate"
   },
   "dependencies": {

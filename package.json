@@ -19,7 +19,7 @@
     "clean:workspaces": "turbo clean ; rm -rf .yarn/cache .yarn/install-state.gz",
     "db-push": "turbo db-push",
     "postinstall": "yarn build:ui && yarn generate",
-    "generate": "cd packages/db && yarn prisma generate",
+    "generate": "cd packages/db && yarn prisma:generate",
     "build:ui": "cd packages/ui && yarn build",
     "build-desktop": "turbo run build:tauri --filter nextjs",
     "studio": " cd packages/db && yarn prisma:studio",
@@ -41,9 +41,11 @@
   },
   "devDependencies": {
     "@manypkg/cli": "^0.19.1",
+    "@types/node": "^20.3.2",
     "eslint": "^8.21.0",
     "lerna-update-wizard": "^1.1.2",
     "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
     "turbo": "^1.4.2",
     "typescript": "^4.9.4"
   }

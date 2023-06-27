@@ -5,9 +5,12 @@
   "main": "./index.ts",
   "types": "./index.ts",
   "license": "MIT",
+  "prisma": {
+    "seed": "ts-node ./prisma/seed.ts"
+  },
   "scripts": {
     "build": "tsc",
-    "prisma:generate": "yarn with-env prisma generate",
+    "prisma:generate": "yarn with-env prisma generate && yarn with-env prisma db seed",
     "prisma:studio": "yarn with-env prisma studio",
     "prisma:migrate": "yarn with-env prisma migrate",
     "prisma:migrate:dev": "yarn with-env prisma migrate dev",

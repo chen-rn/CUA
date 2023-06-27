@@ -95,22 +95,23 @@ export function HomeScreen() {
 
       <XStack space>
         <Button {...userLinkProps} theme={"gray"}>
-          User Page(Routing)
+          User Page (Routing)
         </Button>
       </XStack>
 
       <SignedOut>
         <XStack space ai="center">
           <Button {...signInLinkProps} theme={"gray"}>
-            Sign In(Clerk)
+            Sign In
           </Button>
           <Button {...signUpLinkProps} theme={"gray"}>
-            Sign Up(Clerk)
+            Sign Up
           </Button>
         </XStack>
       </SignedOut>
 
       <SignedIn>
+        <Paragraph mb="$4">{userId}</Paragraph>
         <Button
           onPress={() => {
             signOut();

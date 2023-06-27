@@ -1,5 +1,5 @@
 import { YStack } from "@my/ui";
-import { useSignUp } from "app/utils/clerk";
+import { useAuth, useSignUp } from "app/utils/clerk";
 import { OAuthStrategy } from "@clerk/types";
 import { useRouter } from "solito/router";
 import { SignUpSignInComponent } from "@my/ui/src/components/SignUpSignIn";
@@ -7,7 +7,12 @@ import { SignUpSignInComponent } from "@my/ui/src/components/SignUpSignIn";
 export function SignUpScreen() {
   const { push } = useRouter();
 
+  const { userId } = useAuth();
   const { isLoaded, signUp, setSession } = useSignUp();
+
+  if (userId) {
+    push("/");
+  }
 
   if (!setSession || !isLoaded) return null;
 

@@ -12,6 +12,7 @@ export function SignUpScreen() {
 
   if (userId) {
     push("/");
+    return null;
   }
 
   if (!setSession || !isLoaded) return null;

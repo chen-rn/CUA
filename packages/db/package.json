@@ -5,6 +5,9 @@
   "main": "./index.ts",
   "types": "./index.ts",
   "license": "MIT",
+  "prisma": {
+    "seed": "ts-node ./prisma/seed.ts"
+  },
   "scripts": {
     "build": "tsc",
     "prisma:generate": "yarn with-env prisma generate",
@@ -14,7 +17,7 @@
     "clean": "rm -rf .turbo node_modules",
     "with-env": "dotenv -e ../../.env --",
     "dev": "yarn with-env prisma studio --port 5556 --browser=none",
-    "db-push": "yarn with-env prisma db push",
+    "db-push": "yarn with-env prisma db push && yarn with-env prisma db seed",
     "db-generate": "yarn with-env prisma generate"
   },
   "dependencies": {

@@ -105,7 +105,7 @@ I recommend you either spin up a Postgres instance on Railway or use Supabase, y
 
 - `yarn web` to start a web dev server.
 - `yarn native` to run on iOS or Android. **PS**: for this to work, you'll need your web app running on localhost:3000, remember that your NextJS app is also your backend!
-- `yarn studio` to start up your Prisma Studio. **PS**: the tRPC query will show nothing unless you manually open up Prisma and add a "post", or query an user info in the DB!
+- `yarn studio` to start up your Prisma Studio. **PS**: the tRPC example query will show an `example_entry` that you can delete along with the connected `example_user`.
 - `yarn dev` to start up all packages and applications simultaneously.
 
 ### 3. Adding a new screen
@@ -117,7 +117,7 @@ To automate the process explained below you can use the VSCode extension [t3-cua
 - For new routes add a new `routeName.ts` in `packages/api/src/router/` and make sure to merge it in the `index.ts` app router.
 - When you add a new page or screen, you'll need to add the page into both Expo and NextJS:
   - **Expo**
-     - Go to `apps/expo/app/` and create a new `routeName.tsx` that's importing your element from `/app/features/screenName/`.
+    - Go to `apps/expo/app/` and create a new `routeName.tsx` that's importing your element from `/app/features/screenName/`.
   - **Next**
     - Go to `apps/next/pages/`, create a new folder with the name being your route and an `index.tsx` that's importing your element from `/app/features/screenName/`.
 

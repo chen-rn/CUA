@@ -1,5 +1,5 @@
 import { YStack } from "@my/ui";
-import { useSignIn } from "app/utils/clerk";
+import { useAuth, useSignIn } from "app/utils/clerk";
 import { OAuthStrategy } from "@clerk/types";
 import { useRouter } from "solito/router";
 import { SignUpSignInComponent } from "@my/ui/src/components/SignUpSignIn";
@@ -16,6 +16,13 @@ export function SignInScreen() {
   const { push } = useRouter();
 
   const { isLoaded, signIn, setSession } = useSignIn();
+  const { userId } = useAuth();
+
+  if (userId) {
+    push("/");
+    return null;
+  }
+
   if (!setSession) return null;
   if (!isLoaded) return null;
 

@@ -8,7 +8,9 @@
 
 [Here's](https://youtu.be/aTEv0-ZBbWk) a 20 minute Youtube tutorial going over everything if that's more of your style!
 
-You can also run `npx create-t3-universal-app` to start your project! (by [albbus](https://github.com/albbus-stack/create-t3-universal-app))
+You can also run `npx create-t3-universal-app` to start your project (by [albbus](https://github.com/albbus-stack/create-t3-universal-app)). Add one of the following flags if you want a specific variation of CUA: - `--with-supabase`
+- `--with-drizzle-pg`
+- `--with-drizzle-sql`
 
 If you have any question while using this, feel free to join our [👾Discord👾](https://discord.gg/5HvtckjyYb), we are all pretty active in there!
 

@@ -9403,7 +9403,6 @@ __metadata:
     expo-font: ~11.1.1
     expo-linear-gradient: ~12.1.2
     expo-linking: ~4.0.1
-    expo-random: ~13.1.1
     expo-router: ^1.0.0
     expo-secure-store: ~12.1.1
     expo-splash-screen: ~0.18.2
@@ -9678,17 +9677,6 @@ __metadata:
     compare-versions: ^3.4.0
     invariant: ^2.2.4
   checksum: e3f69a62ef3c8dd357e7e3c90d0009d0dd0cfeae93d86c5043580bd78d35c0be5fcd345bd9dfa7b6e58d0a945b823cb6cb8666ad00c86a06bb31fe409eaed7d5
-  languageName: node
-  linkType: hard
-
-"expo-random@npm:~13.1.1":
-  version: 13.1.2
-  resolution: "expo-random@npm:13.1.2"
-  dependencies:
-    base64-js: ^1.3.0
-  peerDependencies:
-    expo: "*"
-  checksum: 36b4359e3c5d106948d98ddefcf64d2ba1858a68048520fd1dd4fbeca69f47587df15c5c6448db5a5b814ffc7d96ba880348f2a3af51db786b145e1dcfc6f5f1
   languageName: node
   linkType: hard
 

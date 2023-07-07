@@ -15,7 +15,6 @@
     "@babel/runtime": "^7.18.9",
     "@clerk/clerk-expo": "^0.10.16",
     "@my/ui": "*",
-    "@types/react-native": "~0.70.6",
     "app": "*",
     "babel-plugin-module-resolver": "^4.1.0",
     "expo": "^48.0.0",

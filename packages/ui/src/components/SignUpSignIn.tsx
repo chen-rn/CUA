@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   YStack,
   Paragraph,
@@ -51,7 +51,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({
           borderColor="$gray8Light"
         >
           <Image
-            src="https://qwvsfvhphdefqfyuuhlb.supabase.co/storage/v1/object/public/logos/Google%20logo.png"
+            source={ {uri: 'https://img.clerk.com/static/google.svg'}}
             width={20}
             height={20}
           />
@@ -64,7 +64,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({
           borderColor="$gray8Light"
         >
           <Image
-            src="https://qwvsfvhphdefqfyuuhlb.supabase.co/storage/v1/object/public/logos/Apple%20logo.png"
+            source={ {uri: 'https://img.clerk.com/static/apple.svg'}}
             width={22}
             height={22}
             resizeMode="contain"
@@ -78,7 +78,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({
           borderColor="$gray8Light"
         >
           <Image
-            src="https://qwvsfvhphdefqfyuuhlb.supabase.co/storage/v1/object/public/logos/Discord%20logo.png"
+            source={ {uri: 'https://img.clerk.com/static/discord.svg'}}
             width={25}
             height={22}
             resizeMode="contain"

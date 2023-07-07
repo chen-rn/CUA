@@ -32,7 +32,8 @@
     "react-dom": "18.2.0",
     "react-refresh": "^0.14.0",
     "react-native-svg": "13.4.0",
-    "react-native-web": "0.18.9"
+    "@expo/config-plugins": "6.0.0",
+    "@expo/prebuild-config": "6.0.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.18.9",

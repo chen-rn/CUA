@@ -15,7 +15,7 @@
     "build:tauri": "yarn tauri build"
   },
   "dependencies": {
-    "@tamagui/next-theme": "1.26.0",
+    "@tamagui/next-theme": "1.39.5",
     "app": "*",
     "dotenv-cli": "^7.0.0",
     "next": "^13.0.6",
@@ -27,7 +27,7 @@
     "react-native-web-lite": "^1.0.1-beta.144"
   },
   "devDependencies": {
-    "@tamagui/next-plugin": "1.26.0",
+    "@tamagui/next-plugin": "1.39.5",
     "@tauri-apps/cli": "^1.2.3",
     "@types/node": "^18.6.4",
     "critters": "^0.0.16",

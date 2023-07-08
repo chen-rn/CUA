@@ -130,6 +130,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({
             ? "Already have an account?"
             : "Don’t have an account?"}
         </Paragraph>
+        { // @ts-ignore
         <Link href={type === "sign-up" ? "/signin" : "/signup"}>
           <Paragraph
             cursor={"pointer"}
@@ -141,6 +142,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({
             {type === "sign-up" ? "Sign in" : "Sign up"}
           </Paragraph>
         </Link>
+        }
       </XStack>
     </YStack>
   );

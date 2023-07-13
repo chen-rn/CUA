@@ -3,19 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "yarn with-env next dev",
-    "build": "yarn with-env next build",
+    "dev": "TAMAGUI_TARGET=web && yarn with-env next dev",
+    "build": "TAMAGUI_TARGET=web && yarn with-env next build",
     "with-env": "dotenv -e ../../.env --",
     "clean": "rm -rf .next .turbo node_modules .tamagui",
     "start": "next start",
-    "serve": "NODE_ENV=production next start --port 8151",
+    "serve": "NODE_ENV=production && next start --port 8151",
     "lint": "next lint",
     "export": "next export",
     "dev:tauri": "yarn tauri dev",
     "build:tauri": "yarn tauri build"
   },
   "dependencies": {
-    "@tamagui/next-theme": "1.26.0",
+    "@tamagui/next-theme": "1.39.8",
     "app": "*",
     "dotenv-cli": "^7.0.0",
     "next": "^13.0.6",
@@ -27,7 +27,7 @@
     "react-native-web-lite": "^1.0.1-beta.144"
   },
   "devDependencies": {
-    "@tamagui/next-plugin": "1.26.0",
+    "@tamagui/next-plugin": "1.39.8",
     "@tauri-apps/cli": "^1.2.3",
     "@types/node": "^18.6.4",
     "critters": "^0.0.16",

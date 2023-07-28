@@ -94,17 +94,17 @@ export function HomeScreen() {
       </YStack>
 
       <XStack space>
-        <Button {...userLinkProps} theme={"gray"}>
+        <Button {...userLinkProps} theme={"red"}>
           User Page (Routing)
         </Button>
       </XStack>
 
       <SignedOut>
         <XStack space ai="center">
-          <Button {...signInLinkProps} theme={"gray"}>
+          <Button {...signInLinkProps} theme={"red"}>
             Sign In
           </Button>
-          <Button {...signUpLinkProps} theme={"gray"}>
+          <Button {...signUpLinkProps} theme={"red"}>
             Sign Up
           </Button>
         </XStack>

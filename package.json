@@ -42,7 +42,11 @@
   "devDependencies": {
     "@manypkg/cli": "^0.19.1",
     "@types/node": "^20.3.2",
-    "eslint": "^8.21.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.1.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "lerna-update-wizard": "^1.1.2",
     "prettier": "^2.7.1",
     "ts-node": "^10.9.1",

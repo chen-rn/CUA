@@ -69,8 +69,8 @@ export function HomeScreen() {
         </Paragraph>
         <Paragraph ta="center">
           This template uses Expo, Next, Solito, tRPC, Tamagui, Clerk, and
-          Prisma. If you're a beginner and is a little overwhelmed, I've also
-          made a{" "}
+          Prisma. If you&aposre a beginner and is a little overwhelmed, I&aposve
+          also made a{" "}
           <Anchor
             color="$color12"
             href="https://youtu.be/aTEv0-ZBbWk"

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { SignUpSignInComponent } from '@my/ui/src/components/SignUpSignIn';
 
 export function Main({ name = "Extension" }) {
   const [data, setData] = useState("")
@@ -15,6 +16,7 @@ export function Main({ name = "Extension" }) {
       </h1>
       <input onChange={(e) => setData(e.target.value)} value={data} />
 
+	  <SignUpSignInComponent type="sign-up" handleOAuthWithPress={() => {}} handleEmailWithPress={() => {}} />
       <a href="https://docs.plasmo.com">READ THE DOCS!</a>
     </div>
   )

@@ -1,6 +1,8 @@
 import { prisma } from "@my/db";
-import { type inferAsyncReturnType } from "@trpc/server";
-import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
+import { createPagesServerClient } from "@supabase/auth-helpers-nextjs";
+import { inferAsyncReturnType } from "@trpc/server";
+import { CreateNextContextOptions } from "@trpc/server/adapters/next";
+
 //import { getAuth, clerkClient } from "@clerk/nextjs/server";
 
 import type { User } from "@supabase/supabase-js";
@@ -26,8 +28,6 @@ export const createContextInner = async ({ user }: IUserProps) => {
   };
 };
 
-import { createServerSupabaseClient } from "@supabase/auth-helpers-nextjs";
-
 /**
  * This is the actual context you'll use in your router
  * @link https://trpc.io/docs/context
@@ -35,7 +35,7 @@ import { createServerSupabaseClient } from "@supabase/auth-helpers-nextjs";
 export const createContext = async (opts: CreateNextContextOptions) => {
   const { req, res } = opts;
   // Create authenticated Supabase Client.
-  const supabaseServerClient = createServerSupabaseClient({ req, res });
+  const supabaseServerClient = createPagesServerClient({ req, res });
 
   async function getUser() {
     // get userId from request

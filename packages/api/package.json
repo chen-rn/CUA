@@ -5,18 +5,18 @@
   "types": "./index.ts",
   "license": "MIT",
   "dependencies": {
-    "@clerk/nextjs": "^4.6.15",
+    "@clerk/nextjs": "^4.23.1",
     "@my/db": "*",
-    "@supabase/auth-helpers-nextjs": "^0.5.4",
-    "@supabase/auth-helpers-react": "^0.3.1",
-    "@supabase/supabase-js": "^2.8.0",
-    "@trpc/client": "10.9.0",
-    "@trpc/server": "10.9.0",
-    "superjson": "^1.9.1",
-    "zod": "^3.18.0"
+    "@supabase/auth-helpers-nextjs": "^0.7.2",
+    "@supabase/auth-helpers-react": "^0.4.0",
+    "@supabase/supabase-js": "2.25.0",
+    "@trpc/client": "^10.35.0",
+    "@trpc/server": "^10.35.0",
+    "superjson": "1.13.1",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
-    "eslint": "^8.28.0",
-    "typescript": "4.9.4"
+    "eslint": "^8.45.0",
+    "typescript": "^5.1.6"
   }
 }

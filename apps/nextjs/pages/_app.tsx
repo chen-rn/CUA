@@ -1,16 +1,24 @@
-import "@tamagui/core/reset.css";
-import "@tamagui/font-inter/css/400.css";
-import "@tamagui/font-inter/css/700.css";
+import '@tamagui/core/reset.css';
+import '@tamagui/font-inter/css/400.css';
+import '@tamagui/font-inter/css/700.css';
+import 'raf/polyfill';
 
-import { NextThemeProvider, useRootTheme } from "@tamagui/next-theme";
-import { Provider } from "app/provider";
-import Head from "next/head";
-import React, { useMemo } from "react";
+import { Provider } from 'app/provider';
+import { trpc } from 'app/utils/trpc.web';
+import Head from 'next/head';
+import React, { useMemo } from 'react';
+
+import { NextThemeProvider, useRootTheme } from '@tamagui/next-theme';
+
 import type { SolitoAppProps } from "solito";
-import "raf/polyfill";
-import { trpc } from "app/utils/trpc.web";
-
 function MyApp({ Component, pageProps }: SolitoAppProps) {
+
+  const contents = useMemo(() => {
+    // @ts-ignore
+    return <Component {...pageProps} />
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pageProps])
+
   return (
     <>
       <Head>
@@ -19,7 +27,7 @@ function MyApp({ Component, pageProps }: SolitoAppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider>
-        <Component {...pageProps} />
+      {contents}
       </ThemeProvider>
     </>
   );
@@ -29,7 +37,7 @@ function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useRootTheme();
 
   return (
-    <NextThemeProvider onChangeTheme={setTheme}>
+    <NextThemeProvider defaultTheme='light' onChangeTheme={setTheme}>
       <Provider disableRootThemeClass defaultTheme={theme}>
         {children}
       </Provider>

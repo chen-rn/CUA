@@ -1,20 +1,22 @@
-import { createTRPCReact } from "@trpc/react-query";
-import type { AppRouter } from "@my/api";
 /**
  * Extend this function when going to production by
  * setting the baseUrl to your production API URL.
  */
 import Constants from "expo-constants";
+import * as React from "react";
+
+import { transformer } from "@my/api/transformer";
 /**
  * A wrapper for your app that provides the TRPC context.
  * Use only in _app.tsx
  */
-import React from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { httpBatchLink } from "@trpc/client";
-import { transformer } from "@my/api/transformer";
+import { createTRPCReact } from "@trpc/react-query";
+
 import { supabase } from "./supabase";
 
+import type { AppRouter } from "@my/api";
 /**
  * A set of typesafe hooks for consuming your API.
  */
@@ -32,15 +34,18 @@ const getBaseUrl = () => {
    * extra field in your expo app.config.ts or app.json. This is because localhost
    * will not be available in production.
    */
-  if (!__DEV__) {
-    const productionApiUrl = Constants.manifest?.extra?.productionApiUrl as string;
-    if (!productionApiUrl) throw new Error("failed to get productionApiUrl, missing in extra section of app.config.ts");
-    return productionApiUrl;
-  }
 
-  const localhost = Constants.manifest?.debuggerHost?.split(":")[0];
-  if (!localhost) throw new Error("failed to get localhost, configure it manually");
-  return `http://${localhost}:3000`;
+  // if (!__DEV__) {
+  //   const productionApiUrl = Constants.manifest?.extra?.productionApiUrl as string;
+  //   if (!productionApiUrl) throw new Error("failed to get productionApiUrl, missing in extra section of app.config.ts");
+  //   return productionApiUrl;
+  // }
+
+  // const localhost = Constants.manifest?.debuggerHost?.split(":")[0];
+  // if (!localhost) throw new Error("failed to get localhost, configure it manually");
+  // return `http://${localhost}:3000`;
+
+  return "http://192.168.0.190:3000";
 };
 
 export const TRPCProvider: React.FC<{

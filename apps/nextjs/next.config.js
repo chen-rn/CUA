@@ -74,16 +74,17 @@ module.exports = function () {
       'expo-linking',
       'expo-constants',
       'expo-modules-core',
-        /*
-        leave these here, and enable if installing dependancies causes issues
-        '@my/api',
-        '@my/db',
-         */
+      'react-native-safe-area-context',
+      'react-native-reanimated',
+      'react-native-gesture-handler'
     ],
     experimental: {
       // optimizeCss: true,
+      appDir: false,
+      optimizeCss: false,
+      forceSwcTransforms: true,
       scrollRestoration: true,
-      legacyBrowsers: false,
+      legacyBrowsers: false
     },
   }
 

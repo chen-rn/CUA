@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { YStack, Paragraph, XStack, Button, Input, Image, Stack } from "tamagui";
-import { Link } from "solito/link";
+import { useState } from 'react';
+import { Link } from 'solito/link';
+import { Button, Image, Input, Paragraph, Stack, XStack, YStack } from 'tamagui';
+
 import type { Provider } from "@supabase/supabase-js";
 
 interface Props {
@@ -37,11 +38,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({ type, handleOAuthWithPr
           focusStyle={{ scale: 0.95 }}
           borderColor="$gray8"
         >
-          <Image
-            src="https://qwvsfvhphdefqfyuuhlb.supabase.co/storage/v1/object/public/logos/Google%20logo.png"
-            width={20}
-            height={20}
-          />
+         
         </Button>
         <Button
           size="$5"
@@ -50,12 +47,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({ type, handleOAuthWithPr
           focusStyle={{ scale: 0.95 }}
           borderColor="$gray8"
         >
-          <Image
-            src="https://qwvsfvhphdefqfyuuhlb.supabase.co/storage/v1/object/public/logos/Apple%20logo.png"
-            width={22}
-            height={22}
-            resizeMode="contain"
-          />
+          
         </Button>
         <Button
           size="$5"
@@ -64,12 +56,7 @@ export const SignUpSignInComponent: React.FC<Props> = ({ type, handleOAuthWithPr
           focusStyle={{ scale: 0.95 }}
           borderColor="$gray8"
         >
-          <Image
-            src="https://qwvsfvhphdefqfyuuhlb.supabase.co/storage/v1/object/public/logos/Discord%20logo.png"
-            width={25}
-            height={22}
-            resizeMode="contain"
-          />
+          
         </Button>
       </XStack>
       <XStack ai="center" width="100%" jc="space-between">

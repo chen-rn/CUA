@@ -21,8 +21,8 @@
     "@prisma/client": "latest"
   },
   "devDependencies": {
-    "dotenv-cli": "^6.0.0",
+    "dotenv-cli": "^7.2.1",
     "prisma": "latest",
-    "typescript": "4.9.4"
+    "typescript": "^5.1.6"
   }
 }

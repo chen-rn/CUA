@@ -1,11 +1,24 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "baseUrl": ".",
     "paths": {
       "react-native": [
-        "react-native-web"
+        "react-native-web",
+      ],
+      "app/*": [
+        "../../packages/app/*"
+      ],
+      "@my/api/*": [
+        "../../packages/api/*"
+      ],
+      "@my/ui/*": [
+        "../../packages/ui/*"
       ]
     },
     "allowJs": true,
@@ -19,8 +32,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

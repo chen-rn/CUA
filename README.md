@@ -1,3 +1,7 @@
+# ❗️❗️❗️❗️NOTE: THIS REPO HAS BEEN DEPRECATED IN FAVOR OF THE [T4-STACK]([url]())❗️❗️❗️❗️
+Please go give a star to the T4 stack here: https://github.com/timothymiller/t4-app
+<br/><br/><br/><br/><br/>
+
 # 🌌 create-universal-app (CUA)
 
 <https://user-images.githubusercontent.com/36214945/211167187-347b87ce-1c03-4678-9904-542aa78ab131.mp4>

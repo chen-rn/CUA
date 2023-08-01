@@ -1,5 +1,16 @@
-# ❗️❗️❗️❗️NOTE: THIS REPO HAS BEEN DEPRECATED IN FAVOR OF THE [T4-STACK]([url]())❗️❗️❗️❗️
+# ❗️❗️❗️❗️NOTE: THIS REPO HAS BEEN DEPRECATED IN FAVOR OF THE [T4-STACK](https://github.com/timothymiller/t4-app)❗️❗️❗️❗️
+
+Both CUA and T4 aims to create a seamless fullstack universal app development experience. AKA: write once, run everywhere. With very similar choices in technology(tamagui, solito, trpc, etc).
+Both fortunately and unfortunately, technology moves very fast in this space and in order for a template to keep up, constant attention and updates are required.
+Ie. Tamagui has gone through many large updates since the inception of this project. People's preference for ORM has shifted from Prisma to Drizzle. New Expo/Next updates every few months ...
+Unfortunately, it's outside of the scope of my personal passion to constantly update CUA to keep up with all of these changes!
+
+And that is where the T4 stack shines!
+Tim and other community members like Albbus has done a great job keeping everything up to date, and even building toolkits around the template itself(the extension)
+I'll be personally using the T4 stack for my projects and is excited to see where this goes!
+
 Please go give a star to the T4 stack here: https://github.com/timothymiller/t4-app
+
 <br/><br/><br/><br/><br/>
 
 # 🌌 create-universal-app (CUA)

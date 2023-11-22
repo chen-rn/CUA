@@ -1,4 +1,6 @@
-# ❗️❗️❗️❗️NOTE: THIS REPO HAS BEEN DEPRECATED IN FAVOR OF THE [T4-STACK](https://github.com/timothymiller/t4-app)❗️❗️❗️❗️
+## ❗️❗️❗️❗️NOTE 2.0 - T4 stack has some ethical issues, feel free to use whatever, but I personally no longer recommend T4 in particular. ❗️❗️❗️❗️
+
+~# ❗️❗️❗️❗️NOTE: THIS REPO HAS BEEN DEPRECATED IN FAVOR OF THE [T4-STACK](https://github.com/timothymiller/t4-app)❗️❗️❗️❗️~
 
 Both CUA and T4 aims to create a seamless fullstack universal app development experience. AKA: write once, run everywhere. With very similar choices in technology(tamagui, solito, trpc, etc).
 Both fortunately and unfortunately, technology moves very fast in this space and in order for a template to keep up, constant attention and updates are required.

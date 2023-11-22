@@ -11,8 +11,6 @@ And that is where the T4 stack shines!
 Tim and other community members like Albbus has done a great job keeping everything up to date, and even building toolkits around the template itself(the extension)
 I'll be personally using the T4 stack for my projects and is excited to see where this goes!
 
-Please go give a star to the T4 stack here: https://github.com/timothymiller/t4-app
-
 <br/><br/><br/><br/><br/>
 
 # 🌌 create-universal-app (CUA)

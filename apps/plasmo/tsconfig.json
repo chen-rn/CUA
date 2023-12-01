@@ -1,10 +1,16 @@
 {
+  "extends": "plasmo/templates/tsconfig.base",
+  "exclude": ["node_modules"],
+  "include": [".plasmo/index.d.ts", "next-env.d.ts", "./**/*.ts", "./**/*.tsx"],
+
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": ".",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "paths": {
-      "react-native": ["react-native-web"]
+      "~*": ["./src/*"],
+      "react-native": [
+        "react-native-web",
+      ],
     },
     "allowJs": true,
     "skipLibCheck": true,
@@ -18,7 +24,5 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  }
 }
